@@ -26,7 +26,7 @@ const Register = () => {
     };
   
     try {
-      const res = await post("/auth/register", formData); // Removed multipart handling for simplicity
+      const res = await post("/auth/register", formData); 
       const data = res.data;
   
       if (data.success) {
@@ -40,7 +40,6 @@ const Register = () => {
     } catch (error) {
       console.error("Registration error:", error);
       if (error.response && error.response.data) {
-        // Display server error message if available
         toast.error(error.response.data.message || "Registration failed.");
       } else {
         toast.error("An unexpected error occurred. Please try again.");
@@ -63,7 +62,7 @@ const Register = () => {
                 type="text"
                 id="fullName"
                 placeholder="Full Name"
-                value={value.fullName} // Corrected value binding
+                value={value.fullName} 
                 onChange={(e) =>
                   setValue({ ...value, fullName: e.target.value })
                 }

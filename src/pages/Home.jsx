@@ -5,49 +5,55 @@ const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
   return (
     <>
+    <div className="border-t border-gray-300">
       <div className="max-w-screen-2xl mx-auto">
-        <div className="p-2 sm:p-0 sm:max-w-[85%] mx-auto ">
-        <div className="sm:flex justify-between items-center">
-          <div className="my-5 sm:my-10 text-center  text-[1.25rem] sm:text-[1.6rem] text-black font-medium">
-            <span className="border-b border-orange-500 py-2 px-3">
-              Latest Post
-            </span>
-          </div>
-          <form className="my-4 sm:my-0">
-            <div className="relative">
-              <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                <svg
-                  className="w-4 h-4 text-gray-500 dark:text-gray-400"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                  />
-                </svg>
+        <div className="px-2 sm:px-4 mx-auto ">
+          <div className="">
+            <div className="">
+              <div className="sm:flex justify-between items-center">
+                <div className="py-2 sm:py-6 text-center  text-[1.25rem] sm:text-[1.6rem] text-black font-medium">
+                  <span className="">
+                    Latest Post
+                  </span>
+                </div>
+                <form className="my-4 sm:my-0">
+                  <div className="relative">
+                    <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                      <svg
+                        className="w-4 h-4 text-gray-500 dark:text-gray-400"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                        />
+                      </svg>
+                    </div>
+                    <input
+                      type="search"
+                      id="default-search"
+                      className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-200  focus:ring-[#001beb] focus:border-[#001beb] outline-none"
+                      placeholder="Search"
+                      required=""
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                  </div>
+                </form>
               </div>
-              <input
-                type="search"
-                id="default-search"
-                className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-200  focus:ring-[#001beb] focus:border-[#001beb] outline-none"
-                placeholder="Search"
-                required=""
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
+              <div>
+                <RecentPost searchQuery={searchQuery} />
+              </div>
             </div>
-          </form>
-        </div>
-          <div>
-            <RecentPost searchQuery={searchQuery} />
           </div>
         </div>
+      </div>
       </div>
     </>
   );

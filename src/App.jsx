@@ -10,6 +10,7 @@ import Addpost from "./pages/Admin/Addpost";
 import User from "./pages/Admin/User";
 import Allpost from "./pages/Admin/Allpost";
 import { Toaster } from "react-hot-toast";
+import Writeblog from "./pages/Writeblog";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/register" element={<Register />}></Route>
             <Route path="addpost" element={<Addpost />} />
             <Route path="allpost" element={<Allpost />} />
+            <Route path="writepost" element={<Writeblog />} />
             <Route path="user" element={<User />} />
           </Route>
         </Routes>

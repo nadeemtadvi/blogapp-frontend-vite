@@ -1,0 +1,19 @@
+body::-webkit-scrollbar{
+width: 1px;
+}
+body{
+    background-color: #F7F7F7;
+}
+.user-child {
+  display: none;
+}
+.userName:hover .user-child {
+  display: block;
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  top: 38px;
+  border: 1px solid #d1d5db;
+  left: -36px;
+  padding: 0.52rem;
+}

@@ -1,26 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BaseUrl, get } from "../services/Endpoint";
-// import defaulimg from "../assets/CryptoImg/6244967.jpg";
 
-const RecentPost = ({searchQuery}) => {
+const RecentPost = ({ searchQuery }) => {
   const navigate = useNavigate();
   const [post, setPost] = useState([]);
-  
-  const imageUrl = `${BaseUrl}/upload/${post.image}`;
-console.log('Full Image URL:', imageUrl);
-  
+
+
   const filteredPosts = post.filter((p) =>
     p.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
-console.log("filteredPosts",filteredPosts);
-
-  // const formattedDate =  user?.createdAt 
-  // ? new Date(user.createdAt).toLocaleDateString("en-US", {
-  //   year: "numeric",
-  //   month: "short",
-  //   day: "2-digit",
-  // }) : "Date not available";
 
   const handleNavigate = (id) => {
     navigate(`/post/${id}`);
@@ -43,12 +32,14 @@ console.log("filteredPosts",filteredPosts);
   return (
     <div>
       <div className="grid grid-cols-[repeat(_auto-fit,minmax(18rem,1fr)_)] gap-3 mb-24">
-        {filteredPosts.length > 0 ? 
-        (  filteredPosts.map((post, index) => {
+        {filteredPosts.length > 0 ? (
+          filteredPosts.map((post, index) => {
             return (
               <div
                 key={index}
-                className={`${searchQuery ? 'md:w-[400px]':''} bg-white border border-gray-200  p-2 sm:p-2.5 `}
+                className={`${
+                  searchQuery ? "md:w-[400px]" : ""
+                } bg-white border border-gray-200  p-2 sm:p-2.5 `}
               >
                 <div className="  ">
                   <a href="#">
@@ -60,9 +51,7 @@ console.log("filteredPosts",filteredPosts);
                   </a>
                 </div>
                 <div className="">
-                  <button className="mt-3  font-medium text-[15px] text-orange-600  ">
-                    Crypto Coin
-                  </button>
+                 
                   <div
                     onClick={() => handleNavigate(post._id)}
                     className="flex justify-between items-center  hover:text-blue-800 cursor-pointer"
@@ -87,34 +76,19 @@ console.log("filteredPosts",filteredPosts);
                     </svg>
                   </div>
                   <div
-                    // dangerouslySetInnerHTML={{ __html: post?.desc }}
                     className="mb-1 font-normal text-gray-700 dark:text-gray-400 text-ellips"
+                    dangerouslySetInnerHTML={{ __html: post.desc }}
                   ></div>
                 </div>
-                <div className="my-3 grid grid-cols-[40px_auto] gap-2">
-                  <div className="">
-                    <div className=" w-[40px] h-[40px] ">
-                      <img
-                        className="object-cover w-full h-full rounded-full"
-                        src=""
-                        alt=""
-                        // src={user?.profile ? `${BaseUrl}/images/${user.profile}` : defaulimg} 
-                        // alt={user?.FullName || "User profile"}
-                      />
-                    </div>
-                  </div>
-                  <div className="self-center">
-                    <h3 className="text-[13px] font-medium text-black">
-                      {/* {user?.FullName || "NA"} */} name
-                    </h3>
-                    <h3 className="text-gray-600 text-[12px] ">
-                      {/* {formattedDate}  */} date
-                    </h3>
-                  </div>
-                </div>
+             
               </div>
             );
-          })) : (<div className="h-screen"><p>No post Found</p></div>)}
+          })
+        ) : (
+          <div className="h-screen">
+            <p>No post Found</p>
+          </div>
+        )}
       </div>
     </div>
   );

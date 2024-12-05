@@ -46,7 +46,7 @@ const Addpost = () => {
       <div className="flex justify-center items-center ">
         <form
           onSubmit={handleSubmit}
-          className="w-full  bg-white  border border-gray-200 shadow-md p-2 sm:p-4"
+          className="w-full  bg-white  border border-gray-200 shadow-md  m-20"
         >
           <h2 className="text-xl font-medium text-center text-black mb-4">
             Add New Post
