@@ -23,9 +23,15 @@ const Login = () => {
       // console.log('value',value);
       const res = await post("/auth/login", value);
       const data = res.data;
+      const {token, user: { fullName }} = data
       console.log(data);
       if (res.status === 200) {
-        navigate("/");
+        localStorage.setItem('token',token)
+        localStorage.setItem('LoggedUser',fullName)
+        setTimeout(() => {
+
+          navigate("/");
+        },1000)
         toast.success(data.message);
       }
     } catch (error) {

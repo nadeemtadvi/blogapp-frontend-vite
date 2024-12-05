@@ -47,7 +47,7 @@ const Profile = () => {
         <h2 className="text-2xl font-semibold text-center text-black mb-4">
           Update Profile
         </h2>
-        <form onSubmit={handleUpdateProfile} action="/upload" method="POST" enctype="multipart/form-data">
+        <form onSubmit={handleUpdateProfile} encType="multipart/form-data">
           <div className="mb-4">
             <div className="p-3 flex justify-center">
               {profileImage ? (
