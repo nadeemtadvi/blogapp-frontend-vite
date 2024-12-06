@@ -49,9 +49,9 @@ const Register = () => {
   
 
   return (
-    <div className="max-w-screen-2xl mx-auto">
-      <div className="max-w-screen-md mx-auto pb-10">
-        <div className="sm:ml-14 sm:mr-10 px-3 py-6 sm:p-6">
+    <div className="max-w-screen-2xl m-2 sm:mx-auto">
+      <div className="max-w-screen-md mx-auto bg-white  shadow-[rgba(50,50,93,0.25)_0px_2px_5px_-1px,rgba(0,0,0,0.3)_0px_1px_3px_-1px] mt-[5.6rem]">
+        <div className="p-2 sm:p-10">
           <h2 className="text-2xl text-center sm:text-start font-semibold text-gray-800 mb-4">
             Create an account
           </h2>
@@ -66,7 +66,7 @@ const Register = () => {
                 onChange={(e) =>
                   setValue({ ...value, fullName: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#001beb]"
+                className="w-full px-4 py-2 border border-gray-200 focus:outline-none  focus:border-[#0284c7]"
               />
             </div>
 
@@ -80,7 +80,7 @@ const Register = () => {
                   onChange={(e) =>
                     setValue({ ...value, email: e.target.value })
                   }
-                  className="w-full px-4 py-2 border border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#001beb]"
+                  className="w-full px-4 py-2 border border-gray-200 focus:outline-none  focus:border-[#0284c7]"
                 />
               </div>
             </div>
@@ -94,13 +94,13 @@ const Register = () => {
                 onChange={(e) =>
                   setValue({ ...value, password: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#001beb]"
+                className="w-full px-4 py-2 border border-gray-200 focus:outline-none  focus:border-[#0284c7]"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full py-2 bg-[#001beb] hover:bg-blue-700 text-white font-semibold"
+              className="w-full py-2 border border-[#0284c7] hover:bg-[#0284c7] hover:text-white text-[#0284c7] font-semibold"
             >
               Sign up
             </button>
@@ -109,7 +109,7 @@ const Register = () => {
           <div className="mt-4 text-center">
             <p className="text-gray-600">
               Already have an account?{" "}
-              <Link to={"/login"} className="text-[#001beb] hover:underline">
+              <Link to={"/login"} className="text-[#0284c7] hover:underline">
                 Sign in
               </Link>
             </p>

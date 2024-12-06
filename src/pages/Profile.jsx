@@ -70,7 +70,7 @@ const Profile = () => {
               id="profileImage"
               accept="image/*"
               onChange={handleImageChange}
-              className="w-full  text-white border border-gray-200  focus:outline-none focus:ring focus:ring-[#001beb]"
+              className="w-full  text-white border border-gray-200  focus:outline-none focus:ring focus:ring-[#0284c7]"
             />
           </div>
 
@@ -80,7 +80,7 @@ const Profile = () => {
               placeholder="Update Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-2 text-gray-600 border border-gray-200  focus:outline-none focus:ring focus:ring-[#001beb]"
+              className="w-full px-4 py-2 text-gray-600 border border-gray-200  focus:outline-none focus:ring focus:ring-[#0284c7]"
             />
           </div>
           <div className="mb-4">
@@ -89,7 +89,7 @@ const Profile = () => {
               placeholder="Old Password"
               value={oldpassword}
               onChange={(e) => setOldpassword(e.target.value)}
-              className="w-full px-4 py-2 text-gray-600 border border-gray-200  focus:outline-none focus:ring focus:ring-[#001beb]"
+              className="w-full px-4 py-2 text-gray-600 border border-gray-200  focus:outline-none focus:ring focus:ring-[#0284c7]"
             />
           </div>
           <div className="mb-6">
@@ -98,12 +98,12 @@ const Profile = () => {
               placeholder="New Password"
               value={newpassword}
               onChange={(e) => setNewpassword(e.target.value)}
-              className="w-full px-4 py-2 text-gray-600 border border-gray-200  focus:outline-none focus:ring focus:ring-[#001beb]"
+              className="w-full px-4 py-2 text-gray-600 border border-gray-200  focus:outline-none focus:ring focus:ring-[#0284c7]"
             />
           </div>
           <button
             type="submit"
-            className="w-full py-2 text-lg bg-[#001beb] hover:bg-blue-700 text-white font-semibold "
+            className="w-full py-2 text-lg bg-[#0284c7] hover:bg-blue-700 text-white font-semibold "
           >
             Update Profile
           </button>

@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { BaseUrl, get, post } from "../services/Endpoint";
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import {  post } from "../services/Endpoint";
 import toast from "react-hot-toast";
-import { HiMenu } from "react-icons/hi";
 import { navbar } from "../Constant/constants";
 import { useAuth } from "../Contextapi/UserContext";
 
@@ -28,12 +27,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="max-w-screen-2xl mx-auto bg-white p-2 sm:p-4">
-      <div className="flex justify-between items-center">
-        <div className="flex sm:block items-center gap-2">
-          <div className="sm:hidden block">
-            <HiMenu className="text-[27px]" />
-          </div>
+    <div className="bg-white shadow-[rgba(0,0,0,0.16)_0px_1px_4px]">
+    <div className=" max-w-screen-2xl mx-auto  p-2 sm:p-4 border-b border-gray-200 ">
+      <div className="md:flex justify-between items-center">
+        <div className="md:mb-0 mb-4">
+          
           <Link to={"/"}>
             <div className="text-black font-bold text-[1.5rem] uppercase">
               <span className="text-[#EB5B00]">{navbar.NAV_LOGO}</span>
@@ -41,41 +39,48 @@ const Navbar = () => {
             </div>
           </Link>
         </div>
-        <div className="flex gap-16 items-center">
+        <div className="sm:flex gap-10 items-center ">
           {user && user.fullName ? (
-            <div className="userName relative  text-[0.86rem]  cursor-pointer">
-              <h2 className=" capitalize font-medium px-4 py-2 text-gray-900 hover:bg-gray-100">
-                {user.fullName}
-              </h2>
-              <ul className="user-child">
-                <li className="px-4 py-2 border-b border-gray-300">
+            <div className="sm:mb-0 mb-2 flex sm:gap-10 justify-between sm:justify-start items-center relative  text-[0.86rem] ">
+              <div className="hover:text-blue-700 profile-show">
+                <h2 className=" capitalize font-normal  text-gray-400 ">
+                  {user.fullName}
+                </h2>
+                <p className=" font-normal text-gray-400">
                   {user.email}
-                </li>
-                <li className="p-1.5 ">
-                  <Link to={'/writepost'}>                  <button className="whitespace-nowrap border p-[5px_28px_6px] bg-gray-50 border-gray-300">
+                </p>
+              </div>
+
+              <div className=" ">
+                <Link to={"/writepost"}>
+                  {" "}
+                  <button className="text-[0.86rem] w-[175px] font-medium whitespace-nowrap border p-[8px_48px_10px] bg-gray-50 text-gray-500 border-gray-300 hover:text-white hover:border-sky-600 hover:bg-sky-600">
                     Write a blog
                   </button>
-                  </Link>
-
-                </li>
-              </ul>
+                </Link>
+              </div>
             </div>
           ) : null}
           {!user || !user.fullName ? (
+            <div className="text-end">
             <Link to={"/login"}>
-              <button className="p-[5px_28px_6px]    bg-[#001beb]  text-white font-semibold ">
+              <button className="p-[8px_48px_10px] w-[175px]  text-[0.86rem] border-[#0284c7] bg-[#0284c7]  text-white font-medium whitespace-nowrap border hover:bg-white hover:border-[#0284c7] hover:text-[#0284c7] ">
                 Sign in
               </button>
             </Link>
+            </div>
           ) : (
+            <div className="text-end">
             <Link onClick={handleLogout}>
-              <button className="p-[5px_28px_6px]    bg-[#fd472f]  text-white font-semibold ">
+              <button className="p-[8px_48px_10px] w-[175px] text-[0.86rem] border-[#fd472f] bg-[#fd472f]  text-white font-medium whitespace-nowrap border hover:bg-white hover:border-[#fd472f] hover:text-[#fd472f]">
                 Logout
               </button>
             </Link>
+            </div>
           )}
         </div>
       </div>
+    </div>
     </div>
   );
 };

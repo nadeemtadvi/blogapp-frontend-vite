@@ -5,18 +5,18 @@ const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
   return (
     <>
-    <div className="border-t border-gray-300">
-      <div className="max-w-screen-2xl mx-auto">
-        <div className="px-2 sm:px-4 mx-auto ">
+    <div className="">
+      <div className="max-w-screen-2xl mx-auto ">
+        <div className="m-2 sm:m-20">
           <div className="">
             <div className="">
               <div className="sm:flex justify-between items-center">
-                <div className="py-2 sm:py-6 text-center  text-[1.25rem] sm:text-[1.6rem] text-black font-medium">
+                <div className="py-2 sm:py-6 text-center  text-[1.25rem] sm:text-[1.6rem] text-gray-600 font-medium">
                   <span className="">
                     Latest Post
                   </span>
                 </div>
-                <form className="my-4 sm:my-0">
+                <form className="sm:w-[400px] my-4 sm:my-0 shadow-[rgba(0,0,0,0.15)_1.95px_1.95px_2.6px]">
                   <div className="relative">
                     <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                       <svg
@@ -38,7 +38,7 @@ const Home = () => {
                     <input
                       type="search"
                       id="default-search"
-                      className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-200  focus:ring-[#001beb] focus:border-[#001beb] outline-none"
+                      className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-200  focus:ring-[#0284c7] focus:border-[#0284c7] outline-none"
                       placeholder="Search"
                       required=""
                       value={searchQuery}
@@ -47,7 +47,7 @@ const Home = () => {
                   </div>
                 </form>
               </div>
-              <div>
+              <div className="bg-white  shadow-[rgba(50,50,93,0.25)_0px_2px_5px_-1px,rgba(0,0,0,0.3)_0px_1px_3px_-1px]">
                 <RecentPost searchQuery={searchQuery} />
               </div>
             </div>

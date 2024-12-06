@@ -4,16 +4,26 @@ width: 1px;
 body{
     background-color: #F7F7F7;
 }
-.user-child {
-  display: none;
+
+.text-ellips {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;  
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  height: calc(4 * 1.2em); 
+  text-align: justify;
 }
-.userName:hover .user-child {
-  display: block;
-  position: absolute;
-  background-color: white;
-  z-index: 1;
-  top: 38px;
-  border: 1px solid #d1d5db;
-  left: -36px;
-  padding: 0.52rem;
+
+.text-ellips-singleLine {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width:560px) {
+  .footer-icon img {
+    width: 16px;
+    
+  }
 }

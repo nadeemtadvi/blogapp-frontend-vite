@@ -31,7 +31,7 @@ const RecentPost = ({ searchQuery }) => {
 
   return (
     <div>
-      <div className="grid grid-cols-[repeat(_auto-fit,minmax(18rem,1fr)_)] gap-3 mb-24">
+      <div className="grid grid-cols-[repeat(_auto-fit,minmax(19rem,1fr)_)] sm:grid-cols-[repeat(_auto-fit,minmax(21rem,1fr)_)]  mb-24">
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post, index) => {
             return (
@@ -39,9 +39,9 @@ const RecentPost = ({ searchQuery }) => {
                 key={index}
                 className={`${
                   searchQuery ? "md:w-[400px]" : ""
-                } bg-white border border-gray-200  p-2 sm:p-2.5 `}
+                } bg-white border-r border-b border-gray-200  `}
               >
-                <div className="  ">
+                <div className="p-[0.5rem_0.5rem_0] sm:p-[2rem_2rem_0] ">
                   <a href="#">
                     <img
                       className=" h-[160px] sm:h-[200px] w-full object-fit "
@@ -50,37 +50,23 @@ const RecentPost = ({ searchQuery }) => {
                     />
                   </a>
                 </div>
-                <div className="">
+                <div className="p-[0.5rem] sm:p-[0.7rem_2rem_0.7rem]">
                  
                   <div
                     onClick={() => handleNavigate(post._id)}
-                    className="flex justify-between items-center  hover:text-blue-800 cursor-pointer"
+                    className="  hover:text-blue-600 cursor-pointer"
                   >
-                    <h5 className="mb-1 text-[23px] font-semibold tracking-tight text-gray-900 hover:text-blue-800">
+                    <h5 className="text-ellips-singleLine mb-1 text-[20px] font-semibold tracking-tight text-gray-900 hover:text-blue-800">
                       {post.title}
                     </h5>
-                    <svg
-                      className="rotate-[-30deg] w-3.5 h-3.5 ms-2"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 14 10"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M1 5h12m0 0L9 1m4 4L9 9"
-                      />
-                    </svg>
+                   
                   </div>
                   <div
                     className="mb-1 font-normal text-gray-700 dark:text-gray-400 text-ellips"
                     dangerouslySetInnerHTML={{ __html: post.desc }}
                   ></div>
                 </div>
-             
+                
               </div>
             );
           })

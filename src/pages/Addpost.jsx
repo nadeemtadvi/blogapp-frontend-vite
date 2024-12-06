@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
-import { post } from "../../services/Endpoint";
+import { post } from "../services/Endpoint";
 
 const Addpost = () => {
   const [image, setImage] = useState(null);
@@ -14,7 +14,7 @@ const Addpost = () => {
     try {
       const formData = new FormData();
       if (image) {
-        formData.append("postimage", image);
+        formData.append("image", image);
       }
       formData.append("title", title);
       formData.append("desc", description);
@@ -42,15 +42,14 @@ const Addpost = () => {
   };
 
   return (
-    <div>
+    <div className="max-w-screen-lg p-2 sm:p-10 mb-16">
       <div className="flex justify-center items-center ">
         <form
           onSubmit={handleSubmit}
-          className="w-full  bg-white  border border-gray-200 shadow-md  m-20"
+          className="w-full  bg-white  border border-gray-200 shadow-md p-2 sm:p-4 md:p-10"
+          encType="multipart/form-data"
         >
-          <h2 className="text-xl font-medium text-center text-black mb-4">
-            Add New Post
-          </h2>
+        
 
           <div className="mb-4">
             <label className="block text-gray-700  mb-2" htmlFor="image">
@@ -74,7 +73,7 @@ const Addpost = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Enter post title"
-              className="w-full px-3 py-2 border  border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#001beb]"
+              className="w-full px-3 py-2 border  border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#0284c7]"
             />
           </div>
 
@@ -83,18 +82,18 @@ const Addpost = () => {
               Description
             </label>
            
-            {/* <textarea
+            <textarea
               id="description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Write your post description here"
-              className="w-full px-3 py-2 border  border-gray-200 focus:outline-none focus:ring-1 focus:ring[#001beb]"
+              className="w-full px-3 py-2 border  border-gray-200 focus:outline-none focus:ring-1 focus:ring[#0284c7]"
               rows="4"
-            /> */}
+            />
           </div>
 
-          <button className="w-full bg-[#001beb] text-white py-2  font-medium hover:bg-blue-700">
-            Submit
+          <button className="w-full border border-[#0284c7] text-[#0284c7] py-2  font-medium hover:bg-[#0284c7] hover:text-white">
+          Create Post
           </button>
         </form>
       </div>

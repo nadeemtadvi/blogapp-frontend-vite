@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem("token");
     localStorage.removeItem("LoggedUser");
     localStorage.removeItem("email");
-    setUser({ fullName: "", email: "" }); // This should trigger a re-render
+    setUser({ fullName: "", email: "" }); 
   };
 
   return (
