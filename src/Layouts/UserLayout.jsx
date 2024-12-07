@@ -5,7 +5,7 @@ import Footer from "../Components/Footer";
 
 const UserLayout = () => {
   const location = useLocation()
-  const hideFooter = location.pathname === '/login' || location.pathname === '/register' 
+  const hideFooter = location.pathname === '/login' || location.pathname === '/register' || location.pathname === '/textai' 
       
   return (
     <>

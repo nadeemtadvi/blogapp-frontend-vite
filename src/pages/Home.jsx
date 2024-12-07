@@ -50,6 +50,7 @@ const Home = () => {
               <div className="bg-white  shadow-[rgba(50,50,93,0.25)_0px_2px_5px_-1px,rgba(0,0,0,0.3)_0px_1px_3px_-1px]">
                 <RecentPost searchQuery={searchQuery} />
               </div>
+             
             </div>
           </div>
         </div>

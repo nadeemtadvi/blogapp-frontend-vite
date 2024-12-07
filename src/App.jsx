@@ -10,6 +10,7 @@ import Addpost from "./pages/Addpost";
 import Allpost from "./pages/Allpost";
 import { Toaster } from "react-hot-toast";
 import Writeblog from "./pages/Writeblog";
+import ContentGenerator from "./Components/ContentGenerator";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="addpost" element={<Addpost />} />
             <Route path="allpost" element={<Allpost />} />
             <Route path="writepost" element={<Writeblog />} />
+            <Route path="textai" element={<ContentGenerator />} />
           </Route>
         </Routes>
       </BrowserRouter>

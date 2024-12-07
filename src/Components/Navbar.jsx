@@ -39,7 +39,13 @@ const Navbar = () => {
             </div>
           </Link>
         </div>
+       
         <div className="sm:flex gap-10 items-center ">
+        <div className="cursor-pointer">
+        <Link to={"/textai"}>
+          <h2 className="text-[1.8rem] font-bold text-gray-600 hover:scale-[1.09]  transition-all ease-in-out duration-100">AI<span className="text-[10px]">Text Generate</span></h2>
+          </Link>
+        </div>
           {user && user.fullName ? (
             <div className="sm:mb-0 mb-2 flex sm:gap-10 justify-between sm:justify-start items-center relative  text-[0.86rem] ">
               <div className="hover:text-blue-700 profile-show">
@@ -53,7 +59,7 @@ const Navbar = () => {
 
               <div className=" ">
                 <Link to={"/writepost"}>
-                  {" "}
+                   {" "}
                   <button className="text-[0.86rem] w-[175px] font-medium whitespace-nowrap border p-[8px_48px_10px] bg-gray-50 text-gray-500 border-gray-300 hover:text-white hover:border-sky-600 hover:bg-sky-600">
                     Write a blog
                   </button>

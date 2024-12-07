@@ -17,7 +17,7 @@ const RecentPost = ({ searchQuery }) => {
 
   const getpost = async () => {
     try {
-      const res = await get("/blog/getpost");
+      const res = await get("/blog/getpost"); 
       const data = res.data;
       setPost(data.posts);
     } catch (error) {
