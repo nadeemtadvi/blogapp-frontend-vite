@@ -1,9 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.montserrat {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 body::-webkit-scrollbar{
 width: 1px;
 }
 body{
     
     background-color: #f3f4f6;
+  font-family: "Montserrat", serif;
+    
+    font-weight: 300;
 }
 
 .text-ellips {
