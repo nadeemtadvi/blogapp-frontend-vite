@@ -45,16 +45,16 @@ const Login = () => {
 
   return (
     <div>
-      <div className="max-w-screen-2xl m-2 md:mx-auto   bg-coverr">
+      <div className="max-w-screen-xl m-2 md:mx-auto   bg-coverr">
         <div className="h-[100vh] ">
-          <div className="p-2 md:p-10 mt-[1.5rem] sm:mt-[5.6rem] bg-white max-w-screen-md mx-auto   shadow-[rgba(50,50,93,0.25)_0px_2px_5px_-1px,rgba(0,0,0,0.3)_0px_1px_3px_-1px]">
+          <div className="p-2 md:p-10 mt-[1.5rem] sm:mt-[3.6rem] bg-white max-w-screen-sm mx-auto  rounded-[12px]">
 
-            <h2 className="text-2xl font-semibold  text-gray-800 mb-4">
+            <h2 className="text-2xl font-semibold  text-gray-800 mb-6">
               Sign in
             </h2>
 
             <form onSubmit={handleSubmit}>
-              <div className="mb-4">
+              <div className="mb-6">
                 <div className="relative">
                   <input
                     type="email"
@@ -63,13 +63,13 @@ const Login = () => {
                     value={value.email}
                     onChange={handleChange}
                     placeholder="name@company.com"
-                    className="w-full px-4 py-2 border border-gray-200 focus:border-[#0284c7]  bg-white focus:outline-none ]"
+                    className="rounded-[8px] w-full px-4 py-2 border border-gray-200 focus:border-[#0284c7]  bg-white focus:outline-none ]"
                   />
                   
                 </div>
               </div>
 
-              <div className="mb-4">
+              <div className="mb-6">
                 <input
                   type="password"
                   id="password"
@@ -77,19 +77,19 @@ const Login = () => {
                   value={value.password}
                   onChange={handleChange}
                   placeholder="********"
-                  className="w-full px-4 py-2 border border-gray-200 focus:border-[#0284c7]  bg-white focus:outline-none "
+                  className="rounded-[8px] w-full px-4 py-2 border border-gray-200 focus:border-[#0284c7]  bg-white focus:outline-none "
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-2 border border-[#0284c7] text-[#0284c7]  hover:text-white hover:bg-[#0284c7] font-semibold "
+                className="rounded-[8px] w-full py-2 border border-[#0284c7] text-[#0284c7]  hover:text-white hover:bg-[#0284c7] font-semibold "
               >
                 Sign in
               </button>
             </form>
 
-            <div className="mt-4 text-center">
+            <div className="mt-6 text-center">
               <p className="text-gray-600">
                 Don't have an account yet?{" "}
                 <Link

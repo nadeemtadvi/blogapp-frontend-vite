@@ -29,17 +29,17 @@ const ContentGenerator = () => {
   };
 
   return (
-    <div className='max-w-screen-lg m-2 md:m-5 lg:mx-auto mt-[1.5rem] sm:mt-[4rem] bg-white p-2 sm:p-4 md:p-10 shadow-[rgba(50,50,93,0.25)_0px_2px_5px_-1px,rgba(0,0,0,0.3)_0px_1px_3px_-1px]'>
+    <div className='max-w-screen-lg m-2 md:mt-[3.6rem] rounded-[12px] md:m-5 lg:mx-auto mt-[1.5rem] sm:mt-[3.6rem] bg-white p-2 sm:p-4 md:p-10 '>
       <h2 className='text-[20px] font-semibold tracking-tight text-gray-900 mb-4'>AI Generate Blog Content</h2>
       <textarea
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
         rows={4}
         placeholder="Enter your prompt"
-        className='border border-gray-200 outline-none  w-full p-5 focus:border-[#0284c7]'
+        className='border border-gray-200 bg-gray-100 rounded-[8px] outline-none  w-full p-5 focus:border-[#0284c7]'
       />
       <div className='text-end my-4'>
-      <button onClick={handleGenerateContent} disabled={loading} className='bg-gray-100 border border-gray-300 text-gray-400 font-medium p-[6px_36px_7px] hover:bg-white hover:text-[#0284c7] hover:border-[#0284c7]'>
+      <button onClick={handleGenerateContent} disabled={loading} className='hover:bg-gray-100 hover:border-gray-100  rounded-[8px]  hover:text-gray-400 font-medium p-[6px_36px_7px] bg-white text-[#0284c7] border border-[#0284c7]'>
         {loading ? 'Generating...' : 'Generate Content'}
       </button>
       </div>

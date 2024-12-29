@@ -49,15 +49,15 @@ const Register = () => {
   
 
   return (
-    <div className="max-w-screen-2xl m-2 sm:mx-auto">
-      <div className="max-w-screen-md mx-auto bg-white  shadow-[rgba(50,50,93,0.25)_0px_2px_5px_-1px,rgba(0,0,0,0.3)_0px_1px_3px_-1px] mt-[5.6rem]">
+    <div className="max-w-screen-xl m-2 sm:mx-auto">
+      <div className="max-w-screen-sm mx-auto bg-white  rounded-[12px] mt-[3.6rem]">
         <div className="p-2 sm:p-10">
-          <h2 className="text-2xl text-center sm:text-start font-semibold text-gray-800 mb-4">
+          <h2 className="text-2xl text-center sm:text-start font-semibold text-gray-800 mb-6">
             Create an account
           </h2>
 
           <form onSubmit={handleSubmit}>
-            <div className="mb-4">
+            <div className="mb-6">
               <input
                 type="text"
                 id="fullName"
@@ -66,11 +66,11 @@ const Register = () => {
                 onChange={(e) =>
                   setValue({ ...value, fullName: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-200 focus:outline-none  focus:border-[#0284c7]"
+                className="rounded-[8px] w-full px-4 py-2 border border-gray-200 focus:outline-none  focus:border-[#0284c7]"
               />
             </div>
 
-            <div className="mb-4">
+            <div className="mb-6">
               <div className="relative">
                 <input
                   type="email"
@@ -80,7 +80,7 @@ const Register = () => {
                   onChange={(e) =>
                     setValue({ ...value, email: e.target.value })
                   }
-                  className="w-full px-4 py-2 border border-gray-200 focus:outline-none  focus:border-[#0284c7]"
+                  className="rounded-[8px] w-full px-4 py-2 border border-gray-200 focus:outline-none  focus:border-[#0284c7]"
                 />
               </div>
             </div>
@@ -94,19 +94,19 @@ const Register = () => {
                 onChange={(e) =>
                   setValue({ ...value, password: e.target.value })
                 }
-                className="w-full px-4 py-2 border border-gray-200 focus:outline-none  focus:border-[#0284c7]"
+                className=" rounded-[8px] w-full px-4 py-2 border border-gray-200 focus:outline-none  focus:border-[#0284c7]"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full py-2 border border-[#0284c7] hover:bg-[#0284c7] hover:text-white text-[#0284c7] font-semibold"
+              className="rounded-[8px] w-full py-2 border border-[#0284c7] hover:bg-[#0284c7] hover:text-white text-[#0284c7] font-semibold"
             >
               Sign up
             </button>
           </form>
 
-          <div className="mt-4 text-center">
+          <div className="mt-6 text-center">
             <p className="text-gray-600">
               Already have an account?{" "}
               <Link to={"/login"} className="text-[#0284c7] hover:underline">

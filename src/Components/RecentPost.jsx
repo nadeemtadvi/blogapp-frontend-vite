@@ -40,30 +40,30 @@ const RecentPost = ({ searchQuery }) => {
                 key={index}
                 className={`${
                   searchQuery ? "md:w-[400px]" : ""
-                } bg-white border-r border-b border-gray-200  `}
+                } bg-[#f3f4f6]  `}
               >
-                <div className="p-[0.5rem_0.5rem_0] sm:p-[2rem_2rem_0] ">
+                <div className=" p-[0.5rem_0.5rem_0] sm:p-[1.2rem_1.2rem_0] ">
                   <a href="#">
                     <img
-                      className=" h-[160px] sm:h-[200px] w-full object-fit "
+                      className=" h-[160px] sm:h-[200px] w-full object-fit rounded-[12px]"
                       src={`${BaseUrl}/${post.image}`}
                       alt=""
                     />
                   </a>
                 </div>
-                <div className="p-[0.5rem] sm:p-[0.7rem_2rem_0.7rem]">
+                <div className="m-[0.5rem] sm:m-[1.5rem] ">
                  
                   <div
                     onClick={() => handleNavigate(post._id)}
                     className="  hover:text-blue-600 cursor-pointer"
                   >
-                    <h5 className="text-ellips-singleLine mb-1 text-[20px] font-semibold tracking-tight text-gray-900 hover:text-blue-800">
+                    <h5 className="  text-ellips-singleLine mb-1 text-[20px] font-semibold tracking-tight text-gray-900 hover:text-blue-800">
                       {post.title}
                     </h5>
                    
                   </div>
                   <div
-                    className="mb-1 font-normal text-gray-700 dark:text-gray-400 text-ellips"
+                    className="mb-1 font-normal text-gray-700 dark:text-gray-400 text-ellips "
                     dangerouslySetInnerHTML={{ __html: post.desc }}
                   ></div>
                 </div>

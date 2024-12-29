@@ -27,8 +27,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-white shadow-[rgba(0,0,0,0.16)_0px_1px_4px]">
-    <div className=" max-w-screen-2xl mx-auto  p-2 sm:p-4 border-b border-gray-200 ">
+    <div className="bg-white">
+    <div className=" max-w-screen-xl mx-auto  p-2 sm:p-4  ">
       <div className="md:flex justify-between items-center">
         <div className="md:mb-0 mb-4">
           
@@ -70,7 +70,7 @@ const Navbar = () => {
           {!user || !user.fullName ? (
             <div className="text-end">
             <Link to={"/login"}>
-              <button className="p-[8px_48px_10px] w-[175px]  text-[0.86rem] border-[#0284c7] bg-[#0284c7]  text-white font-medium whitespace-nowrap border hover:bg-white hover:border-[#0284c7] hover:text-[#0284c7] ">
+              <button className="rounded-[8px] p-[8px_48px_10px] w-[175px]  text-[0.86rem] border-[#0284c7] bg-[#0284c7]  text-white font-medium whitespace-nowrap border hover:bg-white hover:border-[#0284c7] hover:text-[#0284c7] ">
                 Sign in
               </button>
             </Link>
@@ -78,7 +78,7 @@ const Navbar = () => {
           ) : (
             <div className="text-end">
             <Link onClick={handleLogout}>
-              <button className="p-[8px_48px_10px] w-[175px] text-[0.86rem] border-[#fd472f] bg-[#fd472f]  text-white font-medium whitespace-nowrap border hover:bg-white hover:border-[#fd472f] hover:text-[#fd472f]">
+              <button className="rounded-[8px] p-[8px_48px_10px] w-[175px] text-[0.86rem] border-[#fd472f] bg-[#fd472f]  text-white font-medium whitespace-nowrap border hover:bg-white hover:border-[#fd472f] hover:text-[#fd472f]">
                 Logout
               </button>
             </Link>
