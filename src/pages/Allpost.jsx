@@ -50,7 +50,7 @@ const Allpost = () => {
 
   return (
     <div className="relative p-2 sm:p-10">
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(18rem,1fr))] gap-[12px]  ">
+      <div className="md:grid grid-cols-[repeat(auto-fit,minmax(18rem,1fr))] gap-[12px]  ">
         {" "}
         {post &&
           post.map((item ,index) => {
