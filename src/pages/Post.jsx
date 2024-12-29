@@ -30,7 +30,7 @@ useEffect(() => {
 
       <div className="mt-[1.5rem] md:mt-[2rem] mb-[8rem]  text-black">
         <div className="p-2 md:p-10 sm:max-w-screen-lg m-2 md:mx-auto ">
-        <h3 className="text-[1.42rem] mb-8 sm:text-[2rem] font-medium">{onPosts && onPosts?.title}</h3>
+        <h3 className="text-[1.98rem] mb-8 sm:text-[2rem]  font-medium">{onPosts && onPosts?.title}</h3>
           <div className="blog-cove     object-fit w-full">
             <img
              src={onPosts && `${BaseUrl}/${onPosts.image}`}
@@ -38,7 +38,7 @@ useEffect(() => {
               className="object-cover bg-top w-full rounded-[10px] sm:h-[500px] "
             />
           </div>
-          <div className="mt-[1rem] mb-[4rem]" >
+          <div className="mt-[1rem] mb-[4rem] text-[24px] font-light" >
             <h5>{onPosts && onPosts.desc}</h5>
           </div>
           
@@ -46,11 +46,11 @@ useEffect(() => {
             <form className="" action="" >
               <div>
                 <div>
-                  <label htmlFor="">Comment</label>
+                  <label htmlFor="" className="text-[20px] font-light">Comment</label>
                 </div>
 
                 <textarea
-                  className="rounded-[8px] my-2 w-full  p-3 border border-gray-200 outline-none  focus:border-[#0284c7]"
+                  className="rounded-[8px] my-2 w-full text-[20px] font-light p-3 border border-gray-200 outline-none  focus:border-[#0284c7]"
                   name=""
                   id=""
                   rows="4"
@@ -60,7 +60,7 @@ useEffect(() => {
               <div className="text-end">
               <button
                 type="submit"
-                className="mt-4 rounded-[8px] inline-flex items-center px-3 py-2 text-sm font-medium text-center text-[#0284c7] hover:text-white border border-[#0284c7] hover:bg-[#0284c7]  "
+                className="mt-4 rounded-[8px] inline-flex items-center px-3 py-2 text-[20px] font-light text-center text-[#0284c7] hover:text-white border border-[#0284c7] hover:bg-[#0284c7]  "
               >
                 Submit Comment
               </button>

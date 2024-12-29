@@ -30,7 +30,7 @@ const ContentGenerator = () => {
 
   return (
     <div className='max-w-screen-lg m-2 md:mt-[3.6rem] rounded-[12px] md:m-5 lg:mx-auto mt-[1.5rem] sm:mt-[3.6rem] bg-white p-2 sm:p-4 md:p-10 '>
-      <h2 className='text-[20px] font-semibold tracking-tight text-gray-900 mb-4'>AI Generate Blog Content</h2>
+      <h2 className='text-[24px] font-semibold tracking-tight text-gray-900 mb-4'>AI Generate Blog Content</h2>
       <textarea
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}

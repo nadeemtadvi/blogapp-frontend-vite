@@ -43,11 +43,11 @@ const Navbar = () => {
         <div className="sm:flex gap-10 items-center ">
         <div className="cursor-pointer">
         <Link to={"/textai"}>
-          <h2 className="text-[1.8rem] font-bold text-gray-600 hover:scale-[1.09]  transition-all ease-in-out duration-100">AI<span className="text-[10px]">Text Generate</span></h2>
+          <h2 className="text-[1.8rem] font-bold text-gray-600 hover:scale-[1.09]  transition-all ease-in-out duration-100">AI<span className="text-[13px]">Text Generate</span></h2>
           </Link>
         </div>
           {user && user.fullName ? (
-            <div className="sm:mb-0 mb-2 flex sm:gap-10 justify-between sm:justify-start items-center relative  text-[0.86rem] ">
+            <div className="sm:mb-0 mb-2 flex sm:gap-10 justify-between sm:justify-start items-center relative  text-[18px] font-light ">
               <div className="hover:text-blue-700 profile-show">
                 <h2 className=" capitalize font-normal  text-gray-400 ">
                   {user.fullName}
@@ -60,7 +60,7 @@ const Navbar = () => {
               <div className=" ">
                 <Link to={"/writepost"}>
                    {" "}
-                  <button className="rounded-[8px] text-[0.86rem] w-[175px] font-medium whitespace-nowrap border p-[8px_48px_10px] bg-gray-50 text-gray-500 border-gray-300 hover:text-white hover:border-sky-600 hover:bg-sky-600">
+                  <button className="rounded-[8px] text-[18px] font-light w-[175px]  whitespace-nowrap border p-[8px_48px_10px] bg-gray-50 text-gray-500 border-gray-300 hover:text-white hover:border-sky-600 hover:bg-sky-600">
                     Write a blog
                   </button>
                 </Link>
@@ -70,7 +70,7 @@ const Navbar = () => {
           {!user || !user.fullName ? (
             <div className="text-end">
             <Link to={"/login"}>
-              <button className="rounded-[8px] p-[8px_48px_10px] w-[175px]  text-[0.86rem] border-[#0284c7] bg-[#0284c7]  text-white font-medium whitespace-nowrap border hover:bg-white hover:border-[#0284c7] hover:text-[#0284c7] ">
+              <button className="rounded-[8px] p-[8px_48px_10px] w-[175px]  text-[18px] font-light border-[#0284c7] bg-[#0284c7]  text-white  whitespace-nowrap border hover:bg-white hover:border-[#0284c7] hover:text-[#0284c7] ">
                 Sign in
               </button>
             </Link>
@@ -78,7 +78,7 @@ const Navbar = () => {
           ) : (
             <div className="text-end">
             <Link onClick={handleLogout}>
-              <button className="rounded-[8px] p-[8px_48px_10px] w-[175px] text-[0.86rem] border-[#fd472f] bg-[#fd472f]  text-white font-medium whitespace-nowrap border hover:bg-white hover:border-[#fd472f] hover:text-[#fd472f]">
+              <button className="rounded-[8px] p-[8px_48px_10px] w-[175px] text-[18px] font-light border-[#fd472f] bg-[#fd472f]  text-white  whitespace-nowrap border hover:bg-white hover:border-[#fd472f] hover:text-[#fd472f]">
                 Logout
               </button>
             </Link>
