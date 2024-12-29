@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BaseUrl, get } from "../services/Endpoint";
+import Loading from "./Loading";
 
 const RecentPost = ({ searchQuery }) => {
   const navigate = useNavigate();
@@ -71,8 +72,8 @@ const RecentPost = ({ searchQuery }) => {
             );
           })
         ) : (
-          <div className="h-screen">
-            <p>No post Found</p>
+          <div className="">
+            <Loading/>
           </div>
         )}
       </div>
