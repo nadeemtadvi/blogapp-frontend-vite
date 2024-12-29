@@ -11,7 +11,7 @@ const Home = () => {
           <div className="">
             <div className="">
               <div className="sm:flex justify-between items-center px-[1.5rem]">
-                <div className="py-2 sm:py-6 text-center  text-[1.25rem] sm:text-[1.6rem] text-gray-600 font-medium">
+                <div className="py-2 sm:py-6 text-center  text-[28px] text-gray-600 font-medium">
                   <span className="">
                     Latest Post
                   </span>
@@ -38,7 +38,7 @@ const Home = () => {
                     <input
                       type="search"
                       id="default-search"
-                      className="block w-full rounded-[8px]  p-2 ps-10 text-sm text-gray-900   focus:ring-[#0284c7] focus:border-[#0284c7] outline-none"
+                      className="block w-full rounded-[8px]  p-2 ps-10 text-[20px] font-light text-gray-900   focus:ring-[#0284c7] focus:border-[#0284c7] outline-none"
                       placeholder="Search"
                       required=""
                       value={searchQuery}
