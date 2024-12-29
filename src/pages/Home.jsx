@@ -11,7 +11,7 @@ const Home = () => {
           <div className="">
             <div className="">
               <div className="sm:flex justify-between items-center px-[1.5rem]">
-                <div className="py-2 sm:py-6 text-center  text-[28px] text-gray-600 font-medium">
+                <div className="py-2 sm:py-6 text-center  text-[28px] text-gray-600 font-normal">
                   <span className="">
                     Latest Post
                   </span>

@@ -60,8 +60,8 @@ const Navbar = () => {
               <div className=" ">
                 <Link to={"/writepost"}>
                    {" "}
-                  <button className="rounded-[8px] text-[18px] font-light w-[175px]  whitespace-nowrap border p-[8px_48px_10px] bg-gray-50 text-gray-500 border-gray-300 hover:text-white hover:border-sky-600 hover:bg-sky-600">
-                    Write a blog
+                  <button className="rounded-[8px] text-[18px] flex items-center justify-center font-light w-[175px]  whitespace-nowrap border p-[8px_48px_10px] bg-gray-50 text-gray-500 border-gray-300 hover:text-white hover:border-sky-600 hover:bg-sky-600">
+                    <span>Write a blog</span>
                   </button>
                 </Link>
               </div>

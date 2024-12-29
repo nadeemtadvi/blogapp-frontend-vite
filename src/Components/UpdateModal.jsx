@@ -61,9 +61,9 @@ const UpdateModal = ({ handleOpenModal, postId }) => {
       <div
         className="rounded-[12px] overflow-hidden w-full sm:w-[400px] md:w-[600px] fixed -translate-x-2/4 -translate-y-2/4 bg-white shadow-lg z-[1000]  left-1/2 top-1/2"
       >
-        <div className="relative bg-white  ">
+        <div className="relative bg-white  text-[20px]">
           <div className="flex items-center justify-between p-[1rem_2.4rem] border-b border-gray-200">
-            <h3 className="text-xl font-semibold text-gray-900 ">
+            <h3 className="text-[24px] font-medium text-gray-900 ">
               Edit Post
             </h3>
             <button
@@ -135,7 +135,7 @@ const UpdateModal = ({ handleOpenModal, postId }) => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="rounded-[8px] w-full hover:text-white text-[#0284c7] border border-[#0284c7] py-2  font-medium hover:bg-[#0284c7]"
+              className="rounded-[8px] w-full hover:text-white text-[#0284c7] border border-[#0284c7] py-2  font-normal hover:bg-[#0284c7]"
             >
               Update
             </button>

@@ -46,7 +46,7 @@ const Addpost = () => {
       <div className="flex justify-center items-center">
         <form
           onSubmit={handleSubmit}
-          className="w-full  bg-white   rounded-[12px] p-2 sm:p-4 md:p-10"
+          className="w-full  bg-white  text-[20px] rounded-[12px] p-2 sm:p-4 md:p-10"
           encType="multipart/form-data"
         >
         
@@ -92,7 +92,7 @@ const Addpost = () => {
             />
           </div>
 
-          <button className="w-full border rounded-[8px] border-[#0284c7] text-[#0284c7] py-2  font-medium hover:bg-[#0284c7] hover:text-white">
+          <button className="w-full border rounded-[8px] border-[#0284c7] text-[#0284c7] py-2  font-normal hover:bg-[#0284c7] hover:text-white">
           Create Post
           </button>
         </form>

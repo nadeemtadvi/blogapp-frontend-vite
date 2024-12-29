@@ -30,7 +30,7 @@ useEffect(() => {
 
       <div className="mt-[1.5rem] md:mt-[2rem] mb-[8rem]  text-black">
         <div className="p-2 md:p-10 sm:max-w-screen-lg m-2 md:mx-auto ">
-        <h3 className="text-[1.98rem] mb-8 sm:text-[2rem]  font-medium">{onPosts && onPosts?.title}</h3>
+        <h3 className="text-[1.98rem] mb-8 sm:text-[2rem]  font-semibold">{onPosts && onPosts?.title}</h3>
           <div className="blog-cove     object-fit w-full">
             <img
              src={onPosts && `${BaseUrl}/${onPosts.image}`}

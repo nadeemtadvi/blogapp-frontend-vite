@@ -65,16 +65,16 @@ const Allpost = () => {
                     />
                   </div>
                   <div className="p-1.5 sm:p-2">
-                    <h3 className="text-[18px] font-semibold text-gray-900 text-ellips-singleLine">
+                    <h3 className="text-[24px] font-semibold text-gray-900 text-ellips-singleLine">
                       {item.title}
                     </h3>
                     <div
-                      className="text-gray-700 text-[16px] mb-4 text-ellips"
+                      className="text-gray-700 text-[20px] mb-4 text-ellips"
                       dangerouslySetInnerHTML={{ __html: item?.desc }}
                     ></div>
                   </div>
                   <div className="">
-                    <div className="grid grid-cols-2 items-center bg-white rounded-[8px] overflow-hidden">
+                    <div className="grid grid-cols-2 items-center bg-white text-[20px] rounded-[8px] overflow-hidden">
                       <button
                         onClick={() => handleDelete(item._id)}
                         className=" inline-flex  justify-center  hover:bg-[#E4003A] hover:border-[#E4003A] hover:text-white text-gray-400 p-[5px_16px_6px]   items-center"
@@ -95,7 +95,7 @@ const Allpost = () => {
                       </button>
                       <button
                         onClick={() => handleOpenModal(index)}
-                        className="border-l  border-gray-200 hover:bg-[#FFB200] hover:border-[#FFB200] hover:text-white text-gray-400 font-semibold p-[5px_16px_6px]  inline-flex justify-center items-center"
+                        className="border-l  border-gray-200 hover:bg-[#FFB200] hover:border-[#FFB200] hover:text-white text-gray-400  p-[5px_16px_6px]  inline-flex justify-center items-center"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"

@@ -12,13 +12,13 @@ const Writeblog = () => {
           <div className="sm:grid grid-cols-[260px_auto]">
             
             <div className="bg-white pb-3 sm:pb-0 sm:h-[100%]">
-              <h4 className=" py-2.5 text-[1rem] font-medium mx-2">
+              <h4 className=" py-2.5 text-[24px] font-normal mx-2">
                 Customization
               </h4>
               <div className=" ">
                 <ul>
                   <li
-                    className={`p-2.5 text-[0.8rem] text-gray-600 rounded-[8px] ${
+                    className={`p-2.5 text-[20px] font-light text-gray-600 rounded-[8px] ${
                       active === "Create Post"
                         ? "bg-[#0284c7] text-white"
                         : "bg-gray-100 text-gray-600"
@@ -28,7 +28,7 @@ const Writeblog = () => {
                     Create Post
                   </li>
                   <li
-                    className={`p-2.5 text-[0.8rem] rounded-[8px] ${
+                    className={`p-2.5 text-[20px] font-light rounded-[8px] ${
                       active === "Edit Post"
                         ? "bg-[#0284c7] text-white"
                         : "bg-gray-100 text-gray-600"
