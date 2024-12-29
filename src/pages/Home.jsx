@@ -38,7 +38,7 @@ const Home = () => {
                     <input
                       type="search"
                       id="default-search"
-                      className="block w-full p-2 ps-10 text-sm text-gray-900 border-b border-gray-300  focus:ring-[#0284c7] focus:border-[#0284c7] outline-none"
+                      className="block w-full rounded-[8px]  p-2 ps-10 text-sm text-gray-900   focus:ring-[#0284c7] focus:border-[#0284c7] outline-none"
                       placeholder="Search"
                       required=""
                       value={searchQuery}
