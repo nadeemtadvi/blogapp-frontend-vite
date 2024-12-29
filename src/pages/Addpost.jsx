@@ -42,11 +42,11 @@ const Addpost = () => {
   };
 
   return (
-    <div className="max-w-screen-lg p-2 sm:p-10 mb-16">
-      <div className="flex justify-center items-center ">
+    <div className="max-w-screen-md mx-auto  p-2 sm:p-10 mb-16">
+      <div className="flex justify-center items-center">
         <form
           onSubmit={handleSubmit}
-          className="w-full  bg-white  border border-gray-200 shadow-md p-2 sm:p-4 md:p-10"
+          className="w-full  bg-white   rounded-[12px] p-2 sm:p-4 md:p-10"
           encType="multipart/form-data"
         >
         
@@ -59,7 +59,7 @@ const Addpost = () => {
               type="file"
               id="image"
               onChange={(e) => setImage(e.target.files[0])}
-              className="w-full  border overflow-hidden   border-gray-200 text-gray-400"
+              className="w-full rounded-r-[8px] border overflow-hidden   border-gray-200 text-gray-400"
             />
           </div>
 
@@ -73,7 +73,7 @@ const Addpost = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Enter post title"
-              className="w-full px-3 py-2 border  border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#0284c7]"
+              className="w-full px-3 py-2 border rounded-[8px] border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#0284c7]"
             />
           </div>
 
@@ -87,12 +87,12 @@ const Addpost = () => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Write your post description here"
-              className="w-full px-3 py-2 border  border-gray-200 focus:outline-none focus:ring-1 focus:ring[#0284c7]"
+              className="w-full px-3 py-2 border rounded-[8px]  border-gray-200 focus:outline-none focus:ring-1 focus:ring[#0284c7]"
               rows="4"
             />
           </div>
 
-          <button className="w-full border border-[#0284c7] text-[#0284c7] py-2  font-medium hover:bg-[#0284c7] hover:text-white">
+          <button className="w-full border rounded-[8px] border-[#0284c7] text-[#0284c7] py-2  font-medium hover:bg-[#0284c7] hover:text-white">
           Create Post
           </button>
         </form>

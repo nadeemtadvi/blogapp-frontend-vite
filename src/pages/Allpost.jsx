@@ -50,18 +50,18 @@ const Allpost = () => {
 
   return (
     <div className="relative p-2 sm:p-10">
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(18rem,1fr))] gap-[12px] ">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(18rem,1fr))] gap-[12px]  ">
         {" "}
         {post &&
           post.map((item ,index) => {
             return (
-              <div key={item.id} className="">
-                <div className="max-w-sm bg-white  border border-gray-200   overflow-hidden">
-                  <div className="border-b border-gray-200">
+              <div key={item.id} className="mb-6">
+                <div className="max-w-sm     overflow-hidden">
+                  <div className="">
                     <img
                       src={`${BaseUrl}/${item.image}`}
                       alt="Blog"
-                      className="w-full h-[160px] sm:h-[180px] object-fit "
+                      className="w-full h-[160px] sm:h-[180px] object-fit rounded-[8px]"
                     />
                   </div>
                   <div className="p-1.5 sm:p-2">
@@ -74,10 +74,10 @@ const Allpost = () => {
                     ></div>
                   </div>
                   <div className="">
-                    <div className="grid grid-cols-2 items-center ">
+                    <div className="grid grid-cols-2 items-center bg-white rounded-[8px] overflow-hidden">
                       <button
                         onClick={() => handleDelete(item._id)}
-                        className=" border-t border-gray-200 hover:bg-[#E4003A] hover:border-[#E4003A] hover:text-white text-gray-400 p-[3px_16px_4px]  flex items-center"
+                        className=" inline-flex  justify-center  hover:bg-[#E4003A] hover:border-[#E4003A] hover:text-white text-gray-400 p-[5px_16px_6px]   items-center"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +95,7 @@ const Allpost = () => {
                       </button>
                       <button
                         onClick={() => handleOpenModal(index)}
-                        className="border-l border-t border-gray-200 hover:bg-[#FFB200] hover:border-[#FFB200] hover:text-white text-gray-400 font-semibold p-[3px_16px_4px]  flex items-center"
+                        className="border-l  border-gray-200 hover:bg-[#FFB200] hover:border-[#FFB200] hover:text-white text-gray-400 font-semibold p-[5px_16px_6px]  inline-flex justify-center items-center"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
