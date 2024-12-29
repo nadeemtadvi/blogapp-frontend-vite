@@ -45,7 +45,7 @@ const RecentPost = ({ searchQuery }) => {
                 <div className=" p-[0.5rem_0.5rem_0] sm:p-[1.2rem_1.2rem_0] ">
                   <a href="#">
                     <img
-                      className=" h-[160px] sm:h-[200px] w-full object-fit rounded-[12px]"
+                      className="h-[200px] w-full object-fit rounded-[12px]"
                       src={`${BaseUrl}/${post.image}`}
                       alt=""
                     />
