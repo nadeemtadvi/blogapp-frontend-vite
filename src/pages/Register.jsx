@@ -52,11 +52,11 @@ const Register = () => {
     <div className="max-w-screen-xl m-2 sm:mx-auto">
       <div className="max-w-screen-sm mx-auto bg-white  rounded-[12px] mt-[3.6rem]">
         <div className="p-2 sm:p-10">
-          <h2 className="text-2xl text-center sm:text-start font-semibold text-gray-800 mb-6">
+          <h2 className="text-[26px] text-center sm:text-start font-semibold text-gray-800 mb-6">
             Create an account
           </h2>
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="text-[20px]">
             <div className="mb-6">
               <input
                 type="text"
@@ -100,14 +100,14 @@ const Register = () => {
 
             <button
               type="submit"
-              className="rounded-[8px] w-full py-2 border border-[#0284c7] hover:bg-[#0284c7] hover:text-white text-[#0284c7] font-semibold"
+              className="rounded-[8px] w-full py-2 border border-[#0284c7] hover:bg-[#0284c7] hover:text-white text-[#0284c7] font-light"
             >
               Sign up
             </button>
           </form>
 
           <div className="mt-6 text-center">
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-[20px]">
               Already have an account?{" "}
               <Link to={"/login"} className="text-[#0284c7] hover:underline">
                 Sign in

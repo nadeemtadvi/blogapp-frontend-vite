@@ -49,11 +49,11 @@ const Login = () => {
         <div className="h-[100vh] ">
           <div className="p-2 md:p-10 mt-[1.5rem] sm:mt-[3.6rem] bg-white max-w-screen-sm mx-auto  rounded-[12px]">
 
-            <h2 className="text-2xl font-semibold  text-gray-800 mb-6">
+            <h2 className="text-[26px] font-semibold  text-gray-800 mb-6">
               Sign in
             </h2>
 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="text-[20px]">
               <div className="mb-6">
                 <div className="relative">
                   <input
@@ -83,18 +83,18 @@ const Login = () => {
 
               <button
                 type="submit"
-                className="rounded-[8px] w-full py-2 border border-[#0284c7] text-[#0284c7]  hover:text-white hover:bg-[#0284c7] font-semibold "
+                className="rounded-[8px] w-full py-2 border border-[#0284c7] text-[#0284c7]  hover:text-white hover:bg-[#0284c7] font-light "
               >
                 Sign in
               </button>
             </form>
 
             <div className="mt-6 text-center">
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-[20px]">
                 Don't have an account yet?{" "}
                 <Link
                   to={"/register"}
-                  className="text-[#0284c7] hover:underline"
+                  className="text-[#0284c7] hover:underline !font-light"
                 >
                   Sign up
                 </Link>

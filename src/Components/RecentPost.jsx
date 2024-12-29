@@ -57,13 +57,13 @@ const RecentPost = ({ searchQuery }) => {
                     onClick={() => handleNavigate(post._id)}
                     className="  hover:text-blue-600 cursor-pointer"
                   >
-                    <h5 className="  text-ellips-singleLine mb-1 text-[24px] font-semibold tracking-tight text-gray-900 hover:text-blue-800">
+                    <h5 className="  text-ellips-singleLine mb-1 text-[26px] font-semibold tracking-tight text-gray-900 hover:text-blue-800">
                       {post.title}
                     </h5>
                    
                   </div>
                   <div
-                    className="mb-1  text-[20px] text-gray-700 dark:text-gray-400 text-ellips font-light"
+                    className="mb-1  text-[24px] text-gray-700 dark:text-gray-400 text-ellips font-light"
                     dangerouslySetInnerHTML={{ __html: post.desc }}
                   ></div>
                 <p onClick={() => handleNavigate(post._id)} className="text-blue-600 font-light text-end text-[20px] hover:underline">Read more</p>
