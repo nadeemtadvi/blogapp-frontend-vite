@@ -53,7 +53,7 @@ useEffect(() => {
                   className="rounded-[8px] my-2 w-full  p-3 border border-gray-200 outline-none  focus:border-[#0284c7]"
                   name=""
                   id=""
-                  rows="2"
+                  rows="4"
                   placeholder="Write your comment here"
                 ></textarea>
               </div>

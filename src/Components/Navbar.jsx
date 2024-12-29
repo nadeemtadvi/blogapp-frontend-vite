@@ -30,7 +30,7 @@ const Navbar = () => {
     <div className="bg-white">
     <div className=" max-w-screen-xl mx-auto  p-2 sm:p-4  ">
       <div className="md:flex justify-between items-center">
-        <div className="md:mb-0 mb-4">
+        <div className="md:mb-0 mb-4 sm:block flex justify-center items-center">
           
           <Link to={"/"}>
             <div className="text-black font-bold text-[1.5rem] uppercase">
