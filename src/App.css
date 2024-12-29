@@ -12,7 +12,6 @@ body{
   -webkit-line-clamp: 4;
   overflow: hidden;
   text-overflow: ellipsis; 
-  height: calc(4 * 1.2em); 
   text-align: justify;
 }
 

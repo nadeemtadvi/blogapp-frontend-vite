@@ -38,9 +38,9 @@ const RecentPost = ({ searchQuery }) => {
             return (
               <div
                 key={index}
-                className={`${
-                  searchQuery ? "md:w-[400px]" : ""
-                } bg-[#f3f4f6]  `}
+                className={`${ 
+                  searchQuery ? " md:w-[400px]" : ""
+                } bg-[#f3f4f6] mb-3 `}
               >
                 <div className=" p-[0.5rem_0.5rem_0] sm:p-[1.2rem_1.2rem_0] ">
                   <a href="#">
@@ -66,6 +66,7 @@ const RecentPost = ({ searchQuery }) => {
                     className="mb-1 font-normal text-gray-700 dark:text-gray-400 text-ellips "
                     dangerouslySetInnerHTML={{ __html: post.desc }}
                   ></div>
+                <p onClick={() => handleNavigate(post._id)} className="text-blue-600 text-end  hover:underline">Read more</p>
                 </div>
                 
               </div>
