@@ -32,7 +32,7 @@ const Allpost = () => {
         toast.error("Error deleting user:");
       }
     }
-  };
+  }; 
 
 
   useEffect(() => {
@@ -49,7 +49,7 @@ const Allpost = () => {
   }, [loadedata]);
 
   return (
-    <div className="relative p-2 sm:p-10">
+    <div className="relative p-2 sm:p-10 flex justify-center md:block">
       <div className="md:grid grid-cols-[repeat(auto-fit,minmax(18rem,1fr))] gap-[12px]  ">
         {" "}
         {post &&
