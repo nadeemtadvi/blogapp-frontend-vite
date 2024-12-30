@@ -42,32 +42,7 @@ useEffect(() => {
             <h5>{onPosts && onPosts.desc}</h5>
           </div>
           
-          <div className="my-[1rem] text-gray-400">
-            <form className="" action="" >
-              <div>
-                <div>
-                  <label htmlFor="" className="text-[20px] font-light">Comment</label>
-                </div>
-
-                <textarea
-                  className="rounded-[8px] my-2 w-full text-[20px] font-light p-3 border border-gray-200 outline-none  focus:border-[#0284c7]"
-                  name=""
-                  id=""
-                  rows="4"
-                  placeholder="Write your comment here"
-                ></textarea>
-              </div>
-              <div className="text-end">
-              <button
-                type="submit"
-                className="mt-4 rounded-[8px] inline-flex items-center px-3 py-2 text-[20px] font-light text-center text-[#0284c7] hover:text-white border border-[#0284c7] hover:bg-[#0284c7]  "
-              >
-                Submit Comment
-              </button>
-              </div>
-            </form>
-           
-          </div>
+        
         </div>
       </div>
     </div>
