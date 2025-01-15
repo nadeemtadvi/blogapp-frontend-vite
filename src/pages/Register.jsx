@@ -50,9 +50,9 @@ const Register = () => {
 
   return (
     <div className="max-w-screen-xl m-2 sm:mx-auto">
-      <div className="max-w-screen-sm mx-auto bg-white  rounded-[12px] mt-[3.6rem]">
+      <div className="max-w-screen-sm mx-auto bg-white  rounded mt-[3.6rem]">
         <div className="p-2 sm:p-10">
-          <h2 className="text-[26px] text-center sm:text-start font-semibold text-gray-800 mb-6">
+          <h2 className="text-[20px] text-center sm:text-start font-semibold text-stone-800 mb-6">
             Create an account
           </h2>
 
@@ -66,7 +66,7 @@ const Register = () => {
                 onChange={(e) =>
                   setValue({ ...value, fullName: e.target.value })
                 }
-                className="rounded-[8px] w-full px-4 py-2 border border-gray-200 focus:outline-none  focus:border-[#0284c7]"
+                className="rounded w-full px-4 py-2 border border-stone-200 focus:outline-none  focus:border-[#472ffd]"
               />
             </div>
 
@@ -80,7 +80,7 @@ const Register = () => {
                   onChange={(e) =>
                     setValue({ ...value, email: e.target.value })
                   }
-                  className="rounded-[8px] w-full px-4 py-2 border border-gray-200 focus:outline-none  focus:border-[#0284c7]"
+                  className="rounded w-full px-4 py-2 border border-stone-200 focus:outline-none  focus:border-[#472ffd]"
                 />
               </div>
             </div>
@@ -94,22 +94,22 @@ const Register = () => {
                 onChange={(e) =>
                   setValue({ ...value, password: e.target.value })
                 }
-                className=" rounded-[8px] w-full px-4 py-2 border border-gray-200 focus:outline-none  focus:border-[#0284c7]"
+                className=" rounded w-full px-4 py-2 border border-stone-200 focus:outline-none  focus:border-[#472ffd]"
               />
             </div>
 
             <button
               type="submit"
-              className="rounded-[8px] w-full py-2 border border-[#0284c7] hover:bg-[#0284c7] hover:text-white text-[#0284c7] font-light"
+              className="rounded w-full py-2 border border-[#472ffd] hover:bg-[#472ffd] hover:text-white text-[#472ffd] font-normal"
             >
               Sign up
             </button>
           </form>
 
           <div className="mt-6 text-center">
-            <p className="text-gray-600 text-[20px]">
+            <p className="text-stone-600 text-[20px]">
               Already have an account?{" "}
-              <Link to={"/login"} className="text-[#0284c7] hover:underline">
+              <Link to={"/login"} className="text-[#472ffd] hover:underline">
                 Sign in
               </Link>
             </p>

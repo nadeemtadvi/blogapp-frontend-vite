@@ -10,14 +10,14 @@ const Loading = () => {
             className={`md:w-[400px]`}
           >
             <div className="p-[0.5rem_0.5rem_0] sm:p-[1.2rem_1.2rem_0] ">
-              <div className="h-[250px] animate-pulse sm:h-[200px] bg-gray-300 rounded-[12px]"></div>
+              <div className="h-[250px] animate-pulse sm:h-[200px] bg-stone-300 rounded"></div>
             </div>
             <div className="m-[0.5rem] sm:m-[1.5rem] ">
               <div>
-                <h5 className="mb-2 w-[85%] h-[24px] bg-gray-300 animate-pulse rounded-[4px]"></h5>
+                <h5 className="mb-2 w-[85%] h-[24px] bg-stone-300 animate-pulse rounded"></h5>
               </div>
               <div className="mb-1 ">
-                <p className="h-[24px] w-[85%] mb-1 bg-gray-300 animate-pulse rounded-[4px]"></p>
+                <p className="h-[24px] w-[85%] mb-1 bg-stone-300 animate-pulse rounded"></p>
               </div>
             </div>
           </div>

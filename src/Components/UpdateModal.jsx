@@ -59,16 +59,16 @@ const UpdateModal = ({ handleOpenModal, postId }) => {
 
       {/* Modal */}
       <div
-        className="rounded-[12px] overflow-hidden w-full sm:w-[400px] md:w-[600px] fixed -translate-x-2/4 -translate-y-2/4 bg-white shadow-lg z-[1000]  left-1/2 top-1/2"
+        className="rounded overflow-hidden w-full sm:w-[400px] md:w-[600px] fixed -translate-x-2/4 -translate-y-2/4 bg-white shadow-lg z-[1000]  left-1/2 top-1/2"
       >
         <div className="relative bg-white  text-[20px]">
-          <div className="flex items-center justify-between p-[1rem_2.4rem] border-b border-gray-200">
-            <h3 className="text-[24px] font-medium text-gray-900 ">
+          <div className="flex items-center justify-between p-[1rem_2.4rem] border-b border-stone-200">
+            <h3 className="text-[16px] font-medium text-stone-900 ">
               Edit Post
             </h3>
             <button
               onClick={() => handleOpenModal(null)}
-              className="text-gray-400 hover:bg-gray-200 hover:text-gray-900  p-2 rounded-full"
+              className="text-stone-400 hover:bg-stone-200 hover:text-stone-900  p-2 rounded-full"
             >
               <svg
                 className="w-4 h-4"
@@ -92,7 +92,7 @@ const UpdateModal = ({ handleOpenModal, postId }) => {
             encType="multipart/form-data"
           >
             <div className="mb-4">
-              <label className="block text-gray-700 mb-2" htmlFor="image">
+              <label className="block text-stone-700 mb-2" htmlFor="image">
                 Upload Image
               </label>
               <input
@@ -100,12 +100,12 @@ const UpdateModal = ({ handleOpenModal, postId }) => {
                 id="image"
                 accept="image/*"
                 onChange={handleImageChange}
-                className="w-full border border-gray-200  rounded-r-[8px]"
+                className="w-full border border-stone-200  rounded-r-[8px]"
               />
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-700 mb-2" htmlFor="title">
+              <label className="block text-stone-700 mb-2" htmlFor="title">
                 Title
               </label>
               <input
@@ -114,12 +114,12 @@ const UpdateModal = ({ handleOpenModal, postId }) => {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="Enter post title"
-                className="w-full border border-gray-200  p-2 rounded-[8px]"
+                className="w-full border border-stone-200  p-2 rounded"
               />
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-700 mb-2" htmlFor="description">
+              <label className="block text-stone-700 mb-2" htmlFor="description">
                 Description
               </label>
               <textarea
@@ -127,7 +127,7 @@ const UpdateModal = ({ handleOpenModal, postId }) => {
                 value={desc}
                 onChange={(e) => setDesc(e.target.value)}
                 placeholder="Write your post description here"
-                className="w-full border border-gray-200  p-2 rounded-[8px]"
+                className="w-full border border-stone-200  p-2 rounded"
                 rows="4"
               ></textarea>
             </div>
@@ -135,7 +135,7 @@ const UpdateModal = ({ handleOpenModal, postId }) => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="rounded-[8px] w-full hover:text-white text-[#0284c7] border border-[#0284c7] py-2  font-normal hover:bg-[#0284c7]"
+              className="rounded w-full hover:text-white text-[#472ffd] border border-[#472ffd] py-2  font-normal hover:bg-[#472ffd]"
             >
               Update
             </button>

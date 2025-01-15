@@ -26,19 +26,19 @@ useEffect(() => {
 },[loaddata,id])
 
   return (
-    <div className="max-w-screen-xl mx-auto ">
+    <div className="max-w-screen-2xl mx-auto ">
 
-      <div className="mt-[1.5rem] md:mt-[2rem] mb-[8rem]  text-black">
-        <div className="p-2 md:p-10 sm:max-w-screen-lg m-2 md:mx-auto ">
+      <div className="mt-[1.5rem] md:mt-[2rem] mb-[8rem]  text-black p-2 sm:p-4">
+        <div className=" flex flex-col justify-center items-center">
         <h3 className="text-[1.98rem] mb-8 sm:text-[2rem]  font-semibold">{onPosts && onPosts?.title}</h3>
-          <div className="blog-cove     object-fit w-full">
+          <div className="object-fit lg:w-[30%] rounded overflow-hidden">
             <img
              src={onPosts && `${BaseUrl}/${onPosts.image}`}
               alt=""
-              className="object-cover bg-top w-full rounded-[10px] sm:h-[500px] "
+              className="object-fill bg-top w-full  "
             />
           </div>
-          <div className="mt-[1rem] mb-[4rem] text-[24px] font-light" >
+          <div className="mt-[1rem] mb-[4rem] text-[18px] font-normal lg:w-[80%]" >
             <h5>{onPosts && onPosts.desc}</h5>
           </div>
           

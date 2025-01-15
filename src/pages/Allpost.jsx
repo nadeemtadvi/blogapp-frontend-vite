@@ -49,35 +49,35 @@ const Allpost = () => {
   }, [loadedata]);
 
   return (
-    <div className="relative p-2 sm:p-10 flex justify-center md:block">
+    <div className="max-w-screen-2xl mx-auto mb-12 p-2 sm:p-4 ">
       <div className="md:grid grid-cols-[repeat(auto-fit,minmax(18rem,1fr))] gap-[12px]  ">
         {" "}
         {post &&
           post.map((item ,index) => {
             return (
-              <div key={item.id} className="mb-6">
-                <div className="max-w-sm     overflow-hidden">
+              <div key={item.id} className="mb-6 bg-stone-100">
+                <div className="">
                   <div className="">
                     <img
                       src={`${BaseUrl}/${item.image}`}
                       alt="Blog"
-                      className="w-full h-[160px] sm:h-[180px] object-fit rounded-[8px]"
+                      className="w-full h-[160px] sm:h-[180px] object-fit rounded-t"
                     />
                   </div>
                   <div className="p-1.5 sm:p-2">
-                    <h3 className="text-[24px] font-semibold text-gray-900 text-ellips-singleLine">
+                    <h3 className="text-[18px] font-semibold text-stone-900 text-ellips-singleLine">
                       {item.title}
                     </h3>
                     <div
-                      className="text-gray-700 text-[20px] mb-4 text-ellips"
+                      className="text-stone-700 font-normal text-[16px] mb-4 text-ellips"
                       dangerouslySetInnerHTML={{ __html: item?.desc }}
                     ></div>
                   </div>
                   <div className="">
-                    <div className="grid grid-cols-2 items-center bg-white text-[20px] rounded-[8px] overflow-hidden">
+                    <div className="grid grid-cols-2 items-center bg-white text-[16px] rounded overflow-hidden">
                       <button
                         onClick={() => handleDelete(item._id)}
-                        className=" inline-flex  justify-center  hover:bg-[#E4003A] hover:border-[#E4003A] hover:text-white text-gray-400 p-[5px_16px_6px]   items-center"
+                        className=" inline-flex  justify-center  bg-[#fd472f] font-normal  border-[#fd472f] text-white  p-1.5   items-center"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +95,7 @@ const Allpost = () => {
                       </button>
                       <button
                         onClick={() => handleOpenModal(index)}
-                        className="border-l  border-gray-200 hover:bg-[#FFB200] hover:border-[#FFB200] hover:text-white text-gray-400  p-[5px_16px_6px]  inline-flex justify-center items-center"
+                        className="border-l  bg-[#472ffd] border-[#472ffd] text-white   p-1.5 font-normal inline-flex justify-center items-center"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"

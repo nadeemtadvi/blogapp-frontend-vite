@@ -7,20 +7,20 @@ const Home = () => {
     <>
     <div className="">
       <div className="max-w-screen-2xl mx-auto ">
-        <div className="m-2 sm:m-10">
+        <div className="">
           <div className="">
             <div className="">
-              <div className="sm:flex justify-between items-center px-[1.5rem]">
-                <div className="py-2 sm:py-6 text-center  text-[28px] text-gray-600 font-semibold">
-                  <span className="">
-                    Latest Post
+              <div className="sm:flex justify-between items-center p-2 sm:p-4 ">
+              <div className="py-2 sm:py-6 text-center  text-[20px] text-stone-600 font-semibold">
+                  <span className="underline">
+                    Recent Post
                   </span>
                 </div>
-                <form className="sm:w-[400px] my-4 sm:my-0 ">
-                  <div className="relative">
+                <form className="sm:w-[400px] my-4 sm:my-0 border border-stone-200 rounded">
+                  <div className="relative ">
                     <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                       <svg
-                        className="w-4 h-4 text-gray-500 dark:text-gray-400"
+                        className="w-4 h-4 text-stone-500 dark:text-stone-400"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -38,7 +38,7 @@ const Home = () => {
                     <input
                       type="search"
                       id="default-search"
-                      className="block w-full rounded-[8px]  p-2 ps-10 text-[20px] font-light text-gray-900   focus:ring-[#0284c7] focus:border-[#0284c7] outline-none"
+                      className="block w-full rounded  p-2 ps-10 text-[16px] font-normal text-stone-900    focus:ring-[#472ffd] focus:border-[#472ffd] outline-none"
                       placeholder="Search"
                       required=""
                       value={searchQuery}
@@ -46,6 +46,8 @@ const Home = () => {
                     />
                   </div>
                 </form>
+                
+                <div></div>
               </div>
               <div className="  ">
                 <RecentPost searchQuery={searchQuery} />

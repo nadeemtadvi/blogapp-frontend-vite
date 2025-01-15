@@ -17,6 +17,7 @@ import ContentGenerator from "./Components/ContentGenerator";
 function App() {
   return (
     <>
+    <div className=""> 
       <BrowserRouter>
         <Toaster />
         <Routes>
@@ -33,6 +34,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      </div>
     </>
   );
 }

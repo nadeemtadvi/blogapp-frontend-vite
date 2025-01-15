@@ -11,7 +11,7 @@ width: 1px;
 }
 body{
     
-    background-color: #f3f4f6;
+    background-color: #fff;
   font-family: "Montserrat", serif;
     
     font-weight: 300;
@@ -30,7 +30,12 @@ body{
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+.dropdown-menu{
+  display: none;
+}
+.dropdown:hover .dropdown-menu{
+display: block;
+}
 @media screen and (max-width:560px) {
   .footer-icon img {
     width: 16px;

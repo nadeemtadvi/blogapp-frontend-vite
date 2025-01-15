@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import {  post } from "../services/Endpoint";
+import { post } from "../services/Endpoint";
 import toast from "react-hot-toast";
 import { navbar } from "../Constant/constants";
 import { useAuth } from "../Contextapi/UserContext";
-
+import { HiOutlineMenu } from "react-icons/hi";
 const Navbar = () => {
   const navigate = useNavigate();
   const { user, logout } = useAuth();
+  const [show, setshow] = useState(false);
+
+  const handleShow = () => {
+    setshow((prev) => !prev);
+  };
 
   const handleLogout = async () => {
     try {
@@ -27,66 +32,140 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-white">
-    <div className=" max-w-screen-xl mx-auto  p-2 sm:p-4  ">
-      <div className="md:flex justify-between items-center">
-        <div className="md:mb-0 mb-4 sm:block flex justify-center items-center">
-          
-          <Link to={"/"}>
-            <div className="text-black font-bold text-[1.5rem] uppercase">
-              <span className="text-[#EB5B00]">{navbar.NAV_LOGO}</span>
-              <span className="text-[#FFB200]">{navbar.NAV_LOGO_H}</span>
-            </div>
-          </Link>
-        </div>
-       
-        <div className="sm:flex gap-10 items-center ">
-        <div className="cursor-pointer">
-        <Link to={"/textai"}>
-          <h2 className="text-[1.8rem] font-bold text-gray-600 hover:scale-[1.09]  transition-all ease-in-out duration-100">AI<span className="text-[13px]">Text Generate</span></h2>
-          </Link>
-        </div>
-          {user && user.fullName ? (
-            <div className="sm:mb-0 mb-2 flex sm:gap-10 justify-between sm:justify-start items-center relative  text-[18px] font-light ">
-              <div className="hover:text-blue-700 profile-show">
-                <h2 className=" capitalize font-normal  text-gray-400 ">
-                  {user.fullName}
-                </h2>
-                <p className=" font-normal text-gray-400">
-                  {user.email}
-                </p>
+    <div className="">
+      <div className=" max-w-screen-2xl mx-auto  p-2 sm:p-4  ">
+        <div className="flex justify-between items-center ">
+          <div className=" sm:block flex justify-center items-center">
+            <Link to={"/"}>
+              <div className="text-black font-bold  uppercase  p-1 rounded">
+                <span className="text-[#fd472f] text-[1.5rem]">
+                  {navbar.NAV_LOGO}
+                </span>
+                <span className="text-[#fd472f] text-[1.5rem]">
+                  {navbar.NAV_LOGO_H}
+                </span>
               </div>
-
-              <div className=" ">
-                <Link to={"/writepost"}>
-                   {" "}
-                  <button className="rounded-[8px] text-[18px] flex items-center justify-center font-light w-[175px]  whitespace-nowrap border p-[8px_48px_10px] bg-gray-50 text-gray-500 border-gray-300 hover:text-white hover:border-sky-600 hover:bg-sky-600">
-                    <span>Write a blog</span>
-                  </button>
+            </Link>
+          </div>
+          <div className="hidden lg:block">
+            <div className=" flex gap-10 items-center ">
+              <div className="cursor-pointer">
+                <Link to={"/textai"}>
+                  <h2 className="text-[20px] font-bold text-stone-600 hover:bg-[#fd472f0e] p-1 rounded  transition-all ease-in-out duration-100 items-center gap-0 flex flex-col justify-center">
+                    <span className="inline-block leading-normal ">AI</span>
+                    <span className="inline-block border-t border-stone-200 pt-1 leading-none text-[10px]">
+                      Text Generator
+                    </span>
+                  </h2>
                 </Link>
               </div>
+              {user && user.fullName ? (
+                <div className="hover:bg-[#fd472f0e] p-1 rounded profile-show">
+                  <h2 className=" capitalize font-semibold  text-stone-700 text-[16px] ">
+                    {user.fullName}
+                  </h2>
+                  <p className=" font-normal text-stone-600 text-[12px] italic">
+                    ({user.email})
+                  </p>
+                </div>
+              ) : null}
+              {user && user.fullName ? (
+                <div className="dropdown relative">
+                  {" "}
+                  <button className="rounded text-[16px] flex items-center justify-center font-normal w-[140px]  whitespace-nowrap border py-1.5 text-stone-800 border-stone-200 hover:text-white hover:border-[#472ffd] hover:bg-[#472ffd]">
+                    <span>Write a blog</span>
+                  </button>
+                  <div className="dropdown-menu absolute top-[40px] left-0 right-0 m-auto bg-white rounded-lg shadow-lg p-2">
+                    <ul className="text-[14px] text-stone-800 font-normal whitespace-nowrap">
+                      <li className="p-1.5 hover:bg-stone-100">
+                        <Link to={"/writepost"}><span className="inline-block">Create Post</span></Link>
+                        
+                      </li>
+
+                      <li className="p-1.5 hover:bg-stone-100">
+                      <Link to={"/allpost"}><span className="inline-block">Edit Post</span></Link>
+
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              ) : null}
+              {!user || !user.fullName ? (
+                <div className="text-end">
+                  <Link to={"/login"}>
+                    <button className="rounded p-1.5 w-[140px]  text-[16px] font-normal border-[#472ffd] bg-[#472ffd]  text-white  whitespace-nowrap border hover:bg-white hover:border-[#472ffd] hover:text-[#472ffd] ">
+                      Sign in
+                    </button>
+                  </Link>
+                </div>
+              ) : (
+                <div className="text-end">
+                  <Link onClick={handleLogout}>
+                    <button className="rounded p-1.5 w-[140px] text-[16px] font-normal border-[#fd472f] bg-[#fd472f]  text-white  whitespace-nowrap border hover:bg-white hover:border-[#fd472f] hover:text-[#fd472f]">
+                      Logout
+                    </button>
+                  </Link>
+                </div>
+              )}
             </div>
-          ) : null}
-          {!user || !user.fullName ? (
-            <div className="text-end">
-            <Link to={"/login"}>
-              <button className="rounded-[8px] p-[8px_48px_10px] w-[175px]  text-[18px] font-light border-[#0284c7] bg-[#0284c7]  text-white  whitespace-nowrap border hover:bg-white hover:border-[#0284c7] hover:text-[#0284c7] ">
-                Sign in
-              </button>
-            </Link>
+          </div>
+          <div className="relative lg:hidden block">
+            <div className="">
+              <HiOutlineMenu
+                onClick={() => handleShow()}
+                className="text-[20px]"
+              />
             </div>
-          ) : (
-            <div className="text-end">
-            <Link onClick={handleLogout}>
-              <button className="rounded-[8px] p-[8px_48px_10px] w-[175px] text-[18px] font-light border-[#fd472f] bg-[#fd472f]  text-white  whitespace-nowrap border hover:bg-white hover:border-[#fd472f] hover:text-[#fd472f]">
-                Logout
-              </button>
-            </Link>
-            </div>
-          )}
+            {show && (
+              <div>
+                <div class="bg-white rounded-lg shadow-lg p-2  absolute top-0 right-0 z-[20]">
+                  <ul className="text-[14px] font-normal whitespace-nowrap">
+                    {user && user.fullName ? (
+                      <li className="border-b border-stone-200 p-1.5 hover:bg-stone-100">
+                        {user.fullName}{" "}
+                        <p className="text-stone-600 text-[12px] italic">
+                          ({user.email})
+                        </p>
+                      </li>
+                    ) : null}
+                    <li className="border-b border-stone-200 p-1.5 hover:bg-stone-100">
+                      {" "}
+                      <Link to={"/textai"}>AI - Text Generator</Link>
+                    </li>
+                    {user && user.fullName ? (
+                      <li className="dropdown border-b border-stone-200 p-1.5 hover:bg-stone-100">
+                        <Link to={"/writepost"}>
+                          {" "}
+                          <span>blog</span>
+                        </Link>
+                      </li>
+                    ) : null}
+                    {!user || !user.fullName ? (
+                      <li className="p-1.5 hover:bg-stone-100">
+                        <Link to={"/login"}>
+                          {" "}
+                          <span>Sign in</span>
+                        </Link>
+                      </li>
+                    ) : (
+                      <li className="p-1.5 hover:bg-stone-100">
+                        <Link onClick={handleLogout}>
+                          {" "}
+                          <span>Logout</span>
+                        </Link>
+                      </li>
+                    )}
+                  </ul>
+                </div>
+                <div
+                  onClick={() => handleShow()}
+                  class="fixed w-full h-full left-0 top-0  z-[10] bg-opacity-50  "
+                ></div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

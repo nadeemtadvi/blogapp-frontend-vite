@@ -42,29 +42,29 @@ const Addpost = () => {
   };
 
   return (
-    <div className="max-w-screen-md mx-auto  p-2 sm:p-10 mb-16">
-      <div className="flex justify-center items-center">
+    <div className="max-w-screen-2xl mx-auto mb-12">
+      <div className="flex justify-center items-center p-2 mt-6 md:mt-12">
         <form
           onSubmit={handleSubmit}
-          className="w-full  bg-white  text-[20px] rounded-[12px] p-2 sm:p-4 md:p-10"
+          className="md:w-[40%] border border-stone-200  text-[16px] font-medium rounded p-2 sm:p-4 bg-stone-100"
           encType="multipart/form-data"
         >
         
 
           <div className="mb-4">
-            <label className="block text-gray-700  mb-2" htmlFor="image">
+            <label className="block text-stone-700  mb-2" htmlFor="image">
               Upload Image
             </label>
             <input
               type="file"
               id="image"
               onChange={(e) => setImage(e.target.files[0])}
-              className="w-full rounded-r-[8px] border overflow-hidden   border-gray-200 text-gray-400"
+              className="w-full rounded-r-[8px] border overflow-hidden bg-white  border-stone-200 text-stone-400"
             />
           </div>
 
           <div className="mb-4">
-            <label className="block text-gray-700  mb-2" htmlFor="title">
+            <label className="block text-stone-700  mb-2" htmlFor="title">
               Title
             </label>
             <input
@@ -73,12 +73,12 @@ const Addpost = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Enter post title"
-              className="w-full px-3 py-2 border rounded-[8px] border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#0284c7]"
+              className="w-full px-3 py-2 border rounded border-stone-200 focus:outline-none focus:ring-1 focus:ring-[#472ffd]"
             />
           </div>
 
           <div className="mb-4">
-            <label className="block text-gray-700  mb-2" htmlFor="description">
+            <label className="block text-stone-700  mb-2" htmlFor="description">
               Description
             </label>
            
@@ -87,12 +87,12 @@ const Addpost = () => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Write your post description here"
-              className="w-full px-3 py-2 border rounded-[8px]  border-gray-200 focus:outline-none focus:ring-1 focus:ring[#0284c7]"
+              className="w-full px-3 py-2 border rounded  border-stone-200 focus:outline-none focus:ring-1 focus:ring[#472ffd]"
               rows="4"
             />
           </div>
 
-          <button className="w-full border rounded-[8px] border-[#0284c7] text-[#0284c7] py-2  font-normal hover:bg-[#0284c7] hover:text-white">
+          <button className="w-full border font-medium rounded border-[#472ffd] hover:text-[#472ffd] py-2 hover:bg-white  bg-[#472ffd] text-white">
           Create Post
           </button>
         </form>

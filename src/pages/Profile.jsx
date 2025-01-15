@@ -43,7 +43,7 @@ const Profile = () => {
 
   return (
     <div className="mt-[3rem] sm:mt-0 sm:flex items-center justify-center min-h-screen max-w-screen-2xl mx-auto">
-      <div className="border border-gray-200 p-2 mx-2 sm:mx-0 sm:p-6 shadow-md sm:w-96">
+      <div className="border border-stone-200 p-2 mx-2 sm:mx-0 sm:p-6 shadow-md sm:w-96">
         <h2 className="text-2xl font-semibold text-center text-black mb-4">
           Update Profile
         </h2>
@@ -70,7 +70,7 @@ const Profile = () => {
               id="profileImage"
               accept="image/*"
               onChange={handleImageChange}
-              className="w-full  text-white border border-gray-200  focus:outline-none focus:ring focus:ring-[#0284c7]"
+              className="w-full  text-white border border-stone-200  focus:outline-none focus:ring focus:ring-[#472ffd]"
             />
           </div>
 
@@ -80,7 +80,7 @@ const Profile = () => {
               placeholder="Update Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-2 text-gray-600 border border-gray-200  focus:outline-none focus:ring focus:ring-[#0284c7]"
+              className="w-full px-4 py-2 text-stone-600 border border-stone-200  focus:outline-none focus:ring focus:ring-[#472ffd]"
             />
           </div>
           <div className="mb-4">
@@ -89,7 +89,7 @@ const Profile = () => {
               placeholder="Old Password"
               value={oldpassword}
               onChange={(e) => setOldpassword(e.target.value)}
-              className="w-full px-4 py-2 text-gray-600 border border-gray-200  focus:outline-none focus:ring focus:ring-[#0284c7]"
+              className="w-full px-4 py-2 text-stone-600 border border-stone-200  focus:outline-none focus:ring focus:ring-[#472ffd]"
             />
           </div>
           <div className="mb-6">
@@ -98,12 +98,12 @@ const Profile = () => {
               placeholder="New Password"
               value={newpassword}
               onChange={(e) => setNewpassword(e.target.value)}
-              className="w-full px-4 py-2 text-gray-600 border border-gray-200  focus:outline-none focus:ring focus:ring-[#0284c7]"
+              className="w-full px-4 py-2 text-stone-600 border border-stone-200  focus:outline-none focus:ring focus:ring-[#472ffd]"
             />
           </div>
           <button
             type="submit"
-            className="w-full py-2 text-lg bg-[#0284c7] hover:bg-blue-700 text-white font-semibold "
+            className="w-full py-2 text-lg bg-[#472ffd] hover:bg-blue-700 text-white font-semibold "
           >
             Update Profile
           </button>

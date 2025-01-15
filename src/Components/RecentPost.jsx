@@ -31,42 +31,42 @@ const RecentPost = ({ searchQuery }) => {
   }, []);
 
   return (
-    <div>
-      <div className="grid grid-cols-[repeat(_auto-fit,minmax(19rem,1fr)_)] sm:grid-cols-[repeat(_auto-fit,minmax(21rem,1fr)_)]  mb-24">
+    <div className="p-2 sm:p-4  ">
+      <div className="grid grid-cols-[repeat(_auto-fit,minmax(19rem,1fr)_)] sm:grid-cols-[repeat(_auto-fit,minmax(18rem,1fr)_)] gap-5 mb-24">
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post, index) => {
             return (
               <div
                 key={index}
                 className={`${ 
-                  searchQuery ? " md:w-[400px]" : ""
-                } bg-[#f3f4f6] mb-3 `}
+                  searchQuery ? " md:w-[300px]" : ""
+                }  overflow-hidden  mb-3 `}
               >
-                <div className=" p-[0.5rem_0.5rem_0] sm:p-[1.2rem_1.2rem_0] ">
+                <div className="">
                   <a href="#">
                     <img
-                      className="h-[300px] w-full object-fit rounded-[12px]"
+                      className="h-[240px] w-full object-fit rounded-t"
                       src={`${BaseUrl}/${post.image}`}
                       alt=""
                     />
                   </a>
                 </div>
-                <div className="m-[0.5rem] sm:m-[1.5rem] ">
+                <div className="p-3  border border-stone-200 rounded-b ">
                  
                   <div
                     onClick={() => handleNavigate(post._id)}
-                    className="  hover:text-blue-600 cursor-pointer"
+                    className="  hover:text-[#472ffd] cursor-pointer"
                   >
-                    <h5 className="  text-ellips-singleLine mb-1 text-[26px] font-semibold tracking-tight text-gray-900 hover:text-blue-800">
+                    <h5 className="text-ellips-singleLine mb-1 text-[20px] font-medium  underline text-[#fd472f] hover:bg-[#472ffd] hover:text-white">
                       {post.title}
                     </h5>
                    
                   </div>
                   <div
-                    className="mb-1  text-[24px] text-gray-700 dark:text-gray-400 text-ellips font-light"
+                    className="mb-1  text-[18px] text-stone-900 dark:text-stone-400 text-ellips font-normal"
                     dangerouslySetInnerHTML={{ __html: post.desc }}
                   ></div>
-                <p onClick={() => handleNavigate(post._id)} className="text-blue-600 font-light text-end text-[20px] hover:underline">Read more</p>
+                <p onClick={() => handleNavigate(post._id)} className="text-blue-900 font-normal text-end text-[14px] cursor-pointer underline">Read more</p>
                 </div>
                 
               </div>

@@ -47,9 +47,9 @@ const Login = () => {
     <div>
       <div className="max-w-screen-xl m-2 md:mx-auto   bg-coverr">
         <div className="h-[100vh] ">
-          <div className="p-2 md:p-10 mt-[1.5rem] sm:mt-[3.6rem] bg-white max-w-screen-sm mx-auto  rounded-[12px]">
+          <div className="p-2 md:p-10 mt-[1.5rem] sm:mt-[3.6rem] bg-white max-w-screen-sm mx-auto  rounded">
 
-            <h2 className="text-[26px] font-semibold  text-gray-800 mb-6">
+            <h2 className="text-[20px] font-semibold  text-stone-800 mb-6">
               Sign in
             </h2>
 
@@ -63,7 +63,7 @@ const Login = () => {
                     value={value.email}
                     onChange={handleChange}
                     placeholder="name@company.com"
-                    className="rounded-[8px] w-full px-4 py-2 border border-gray-200 focus:border-[#0284c7]  bg-white focus:outline-none ]"
+                    className="rounded w-full px-4 py-2 border border-stone-200 focus:border-[#472ffd]  bg-white focus:outline-none ]"
                   />
                   
                 </div>
@@ -77,24 +77,24 @@ const Login = () => {
                   value={value.password}
                   onChange={handleChange}
                   placeholder="********"
-                  className="rounded-[8px] w-full px-4 py-2 border border-gray-200 focus:border-[#0284c7]  bg-white focus:outline-none "
+                  className="rounded w-full px-4 py-2 border border-stone-200 focus:border-[#472ffd]  bg-white focus:outline-none "
                 />
               </div>
 
               <button
                 type="submit"
-                className="rounded-[8px] w-full py-2 border border-[#0284c7] text-[#0284c7]  hover:text-white hover:bg-[#0284c7] font-light "
+                className="rounded w-full py-2 border border-[#472ffd] text-[#472ffd]  hover:text-white hover:bg-[#472ffd] font-normal "
               >
                 Sign in
               </button>
             </form>
 
             <div className="mt-6 text-center">
-              <p className="text-gray-600 text-[20px]">
+              <p className="text-stone-600 text-[20px]">
                 Don't have an account yet?{" "}
                 <Link
                   to={"/register"}
-                  className="text-[#0284c7] hover:underline !font-light"
+                  className="text-[#472ffd] hover:underline !font-normal"
                 >
                   Sign up
                 </Link>
