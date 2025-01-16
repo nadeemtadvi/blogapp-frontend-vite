@@ -45,15 +45,16 @@ const Login = () => {
 
   return (
     <div>
-      <div className="max-w-screen-xl m-2 md:mx-auto   bg-coverr">
+      <div className="max-w-screen-2xl m-2 md:mx-auto ">
         <div className="h-[100vh] ">
-          <div className="p-2 md:p-10 mt-[1.5rem] sm:mt-[3.6rem] bg-white max-w-screen-sm mx-auto  rounded">
+          <div className="flex justify-center items-center p-2 mt-6 md:mt-12">
 
-            <h2 className="text-[20px] font-semibold  text-stone-800 mb-6">
+           
+
+            <form onSubmit={handleSubmit} className="w-full md:w-[36%] border border-stone-200  text-[16px] font-medium rounded p-2 sm:p-4 bg-stone-100">
+            <h2 className="text-[16px] font-semibold  text-stone-800 mb-6">
               Sign in
             </h2>
-
-            <form onSubmit={handleSubmit} className="text-[20px]">
               <div className="mb-6">
                 <div className="relative">
                   <input
@@ -83,23 +84,29 @@ const Login = () => {
 
               <button
                 type="submit"
-                className="rounded w-full py-2 border border-[#472ffd] text-[#472ffd]  hover:text-white hover:bg-[#472ffd] font-normal "
+                className="rounded w-full py-2 border border-[#472ffd] hover:bg-white hover:text-[#472ffd]  text-white bg-[#472ffd]  "
               >
                 Sign in
               </button>
-            </form>
-
-            <div className="mt-6 text-center">
-              <p className="text-stone-600 text-[20px]">
+              <div className="mt-6 text-center ">
+              <p className="text-stone-800 ">
                 Don't have an account yet?{" "}
                 <Link
                   to={"/register"}
-                  className="text-[#472ffd] hover:underline !font-normal"
+                  className="text-[#472ffd] hover:underline "
                 >
                   Sign up
                 </Link>
               </p>
             </div>
+            <div className="p-4 bg-white w-fit mt-6 mb-3 border border-stone-200 rounded">
+              <h2 className="font-semibold text-[12px] text-red-600">----- Warning ----</h2>
+              <p className="text-[12px]">Admin : kevin@gmail.com</p>
+              <p className="text-[12px]"> pswrd : 123456</p>
+            </div>
+            </form>
+
+           
           </div>
         </div>
       </div>

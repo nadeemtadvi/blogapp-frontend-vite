@@ -51,7 +51,7 @@ const Navbar = () => {
             <div className=" flex gap-10 items-center ">
               <div className="cursor-pointer">
                 <Link to={"/textai"}>
-                  <h2 className="text-[20px] font-bold text-stone-600 hover:bg-[#fd472f0e] p-1 rounded  transition-all ease-in-out duration-100 items-center gap-0 flex flex-col justify-center">
+                  <h2 className="text-[20px] font-bold text-stone-600 hover:bg-stone-100 p-1 rounded  transition-all ease-in-out duration-100 items-center gap-0 flex flex-col justify-center">
                     <span className="inline-block leading-normal ">AI</span>
                     <span className="inline-block border-t border-stone-200 pt-1 leading-none text-[10px]">
                       Text Generator
@@ -60,8 +60,8 @@ const Navbar = () => {
                 </Link>
               </div>
               {user && user.fullName ? (
-                <div className="hover:bg-[#fd472f0e] p-1 rounded profile-show">
-                  <h2 className=" capitalize font-semibold  text-stone-700 text-[16px] ">
+                <div className="hover:bg-stone-100 p-1 rounded profile-show">
+                  <h2 className=" capitalize font-semibold  text-stone-800 text-[16px] ">
                     {user.fullName}
                   </h2>
                   <p className=" font-normal text-stone-600 text-[12px] italic">
@@ -78,13 +78,15 @@ const Navbar = () => {
                   <div className="dropdown-menu absolute top-[40px] left-0 right-0 m-auto bg-white rounded-lg shadow-lg p-2">
                     <ul className="text-[14px] text-stone-800 font-normal whitespace-nowrap">
                       <li className="p-1.5 hover:bg-stone-100">
-                        <Link to={"/writepost"}><span className="inline-block">Create Post</span></Link>
-                        
+                        <Link to={"/writepost"}>
+                          <span className="inline-block">Create Post</span>
+                        </Link>
                       </li>
 
                       <li className="p-1.5 hover:bg-stone-100">
-                      <Link to={"/allpost"}><span className="inline-block">Edit Post</span></Link>
-
+                        <Link to={"/allpost"}>
+                          <span className="inline-block">Edit Post</span>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -133,11 +135,13 @@ const Navbar = () => {
                       <Link to={"/textai"}>AI - Text Generator</Link>
                     </li>
                     {user && user.fullName ? (
-                      <li className="dropdown border-b border-stone-200 p-1.5 hover:bg-stone-100">
-                        <Link to={"/writepost"}>
-                          {" "}
-                          <span>blog</span>
-                        </Link>
+                      <li className=" border-b border-stone-200 p-1.5 hover:bg-stone-100">
+                        <Link to={"/writepost"}>Create Post</Link>
+                      </li>
+                    ) : null}
+                    {user && user.fullName ? (
+                      <li className=" border-b border-stone-200 p-1.5 hover:bg-stone-100">
+                        <Link to={"/allpost"}>Edit Post</Link>
                       </li>
                     ) : null}
                     {!user || !user.fullName ? (

@@ -103,7 +103,7 @@ const Profile = () => {
           </div>
           <button
             type="submit"
-            className="w-full py-2 text-lg bg-[#472ffd] hover:bg-blue-700 text-white font-semibold "
+            className="w-full py-2 text-lg bg-[#472ffd] hover:bg-blue-800 text-white font-semibold "
           >
             Update Profile
           </button>

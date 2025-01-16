@@ -49,7 +49,7 @@ const Allpost = () => {
   }, [loadedata]);
 
   return (
-    <div className="max-w-screen-2xl mx-auto mb-12 p-2 sm:p-4 ">
+    <div className="max-w-screen-2xl mx-auto mt-6 md:mt-12 mb-12 p-2 sm:p-4 ">
       <div className="md:grid grid-cols-[repeat(auto-fit,minmax(18rem,1fr))] gap-[12px]  ">
         {" "}
         {post &&
@@ -69,7 +69,7 @@ const Allpost = () => {
                       {item.title}
                     </h3>
                     <div
-                      className="text-stone-700 font-normal text-[16px] mb-4 text-ellips"
+                      className="text-stone-800 font-normal text-[16px] mb-4 text-ellips"
                       dangerouslySetInnerHTML={{ __html: item?.desc }}
                     ></div>
                   </div>

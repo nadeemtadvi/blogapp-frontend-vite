@@ -13,22 +13,22 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     if (!value.fullName || !value.email || !value.password) {
       toast.error("All fields are required.");
       return;
     }
-  
+
     const formData = {
       fullName: value.fullName,
       email: value.email,
       password: value.password,
     };
-  
+
     try {
-      const res = await post("/auth/register", formData); 
+      const res = await post("/auth/register", formData);
       const data = res.data;
-  
+
       if (data.success) {
         console.log("Registration successful:", data.message);
         toast.success(data.message);
@@ -46,23 +46,24 @@ const Register = () => {
       }
     }
   };
-  
 
   return (
-    <div className="max-w-screen-xl m-2 sm:mx-auto">
-      <div className="max-w-screen-sm mx-auto bg-white  rounded mt-[3.6rem]">
-        <div className="p-2 sm:p-10">
-          <h2 className="text-[20px] text-center sm:text-start font-semibold text-stone-800 mb-6">
-            Create an account
-          </h2>
-
-          <form onSubmit={handleSubmit} className="text-[20px]">
+    <div className="max-w-screen-2xl m-2 sm:mx-auto">
+      <div className="h-[100vh]">
+        <div className="flex justify-center items-center p-2 mt-6 md:mt-12">
+          <form
+            onSubmit={handleSubmit}
+            className="w-full md:w-[36%] border border-stone-200  text-[16px] font-medium rounded p-2 sm:p-4 bg-stone-100"
+          >
+            <h2 className="text-[16px] font-semibold  text-stone-800 mb-6">
+              Create an account
+            </h2>
             <div className="mb-6">
               <input
                 type="text"
                 id="fullName"
                 placeholder="Full Name"
-                value={value.fullName} 
+                value={value.fullName}
                 onChange={(e) =>
                   setValue({ ...value, fullName: e.target.value })
                 }
@@ -104,18 +105,16 @@ const Register = () => {
             >
               Sign up
             </button>
+            <div className="mt-6 text-center">
+              <p className="text-stone-800">
+                Already have an account?{" "}
+                <Link to={"/login"} className="text-[#472ffd] hover:underline">
+                  Sign in
+                </Link>
+              </p>
+            </div>
           </form>
-
-          <div className="mt-6 text-center">
-            <p className="text-stone-600 text-[20px]">
-              Already have an account?{" "}
-              <Link to={"/login"} className="text-[#472ffd] hover:underline">
-                Sign in
-              </Link>
-            </p>
-          </div>
         </div>
-        
       </div>
     </div>
   );

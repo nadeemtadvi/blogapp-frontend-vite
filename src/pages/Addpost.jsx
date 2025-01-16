@@ -46,13 +46,13 @@ const Addpost = () => {
       <div className="flex justify-center items-center p-2 mt-6 md:mt-12">
         <form
           onSubmit={handleSubmit}
-          className="md:w-[40%] border border-stone-200  text-[16px] font-medium rounded p-2 sm:p-4 bg-stone-100"
+          className="w-full md:w-[40%] border border-stone-200  text-[16px] font-medium rounded p-2 sm:p-4 bg-stone-100"
           encType="multipart/form-data"
         >
         
 
           <div className="mb-4">
-            <label className="block text-stone-700  mb-2" htmlFor="image">
+            <label className="block text-stone-800  mb-2" htmlFor="image">
               Upload Image
             </label>
             <input
@@ -64,7 +64,7 @@ const Addpost = () => {
           </div>
 
           <div className="mb-4">
-            <label className="block text-stone-700  mb-2" htmlFor="title">
+            <label className="block text-stone-800  mb-2" htmlFor="title">
               Title
             </label>
             <input
@@ -78,7 +78,7 @@ const Addpost = () => {
           </div>
 
           <div className="mb-4">
-            <label className="block text-stone-700  mb-2" htmlFor="description">
+            <label className="block text-stone-800  mb-2" htmlFor="description">
               Description
             </label>
            
