@@ -101,8 +101,8 @@ const Login = () => {
             </div>
             <div className="p-4 bg-white w-fit mt-6 mb-3 border border-stone-200 rounded">
               <h2 className="font-semibold text-[12px] text-red-600">----- Warning ----</h2>
-              <p className="text-[12px]">Admin : kevin@gmail.com</p>
-              <p className="text-[12px]"> pswrd : 123456</p>
+              <p className="text-[12px]">Admin : param@gmail.com</p>
+              <p className="text-[12px]">pswrd : 123456</p>
             </div>
             </form>
 
