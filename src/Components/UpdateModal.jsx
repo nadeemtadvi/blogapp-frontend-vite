@@ -59,9 +59,9 @@ const UpdateModal = ({ handleOpenModal, postId }) => {
 
       {/* Modal */}
       <div
-        className="rounded overflow-hidden w-full sm:w-[400px] md:w-[500px] fixed -translate-x-2/4 -translate-y-2/4 bg-white shadow-lg z-[1000]  left-1/2 top-1/2"
+        className=" sm:w-[400px] md:w-[500px] w-full fixed -translate-x-2/4 -translate-y-2/4 z-[1000]  left-1/2 top-1/2"
       >
-        <div className="relative bg-white  text-[20px]">
+        <div className="relative bg-white  text-[20px] rounded  w-full m-2  shadow-lg">
           <div className="flex items-center justify-between p-2 sm:p-4 border-b border-stone-200">
             <h3 className="text-[18px] font-medium text-stone-900 ">
               Edit Post
